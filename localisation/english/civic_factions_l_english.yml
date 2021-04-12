@@ -1,0 +1,10 @@
+﻿l_english:
+
+ government_branches.1.name:0 "Radical Faction Founded"
+ government_branches.1.desc.start:0 "The §H[Root.GetName]§! led by §H[Root.Leader.GetTitle] [Root.Leader.GetName]§! has established themselves in the [Root.Owner.GetName]. As a distinct wing of our government, their interests hold a priviledged position in political discourse."
+ government_branches.1.desc.finisher:0 "Our unique style of government is a model for the galaxy."
+ government_branches.1.a:0 "Civic virtue is here."
+
+ pft_mining_guild_faction:0 "Mining Guild Faction"
+ pft_mining_guild_faction_desc:0 "The mining guild represents the many mining and extraction organizations across our empire."
+ government_branches.1.desc.mining_guild_faction:0 "Wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officals in the [Root.Owner.GetName] have economic ties back to the §H[Root.GetName]§!, and it is only natural that the interests of our mining guild be officially represented in our government."

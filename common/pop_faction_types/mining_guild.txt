@@ -1,0 +1,94 @@
+﻿mining_guild_faction = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_authoritarian
+
+	unique = yes
+	support_multiplier = 1
+
+	resources = {
+		category = pop_factions
+		produces = {
+			influence = 1
+		}
+	}
+
+	is_potential = {
+		# years_passed > 10
+		has_encountered_other_species = yes
+		
+		has_civic = civic_mining_guilds 
+		
+		count_owned_pops = {
+			count >= 1
+			limit = {
+				has_ethic = ethic_authoritarian
+			}
+		}
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
+		NOT = { has_trait = trait_nerve_stapled }
+		has_ethic = ethic_authoritarian
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	attraction = {
+		base = 100
+
+		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				exists = leader
+				leader = { leader_class = ruler }
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			exists = from
+			from = {
+				NOT = { exists = leader }
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			has_citizenship_rights = yes
+		}
+	}
+
+	leader = {
+		base = 100
+
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+	}
+
+	on_create = {
+		pop_faction_event = { id = government_branches.1 }
+	}
+
+	on_destroy = {
+	}
+
+	actions = {
+		
+	}
+}
