@@ -4,38 +4,43 @@
 
 namespace = government_branches
 pop_faction_event = {
-	id = government_branches.1
-	title = government_branches.1.name
-	desc = {
-		trigger = {
-			text = government_branches.1.desc.start
+    id = government_branches.1
+    title = government_branches.1.name
+    desc = {
+        trigger = {
+            text = government_branches.1.desc.start
 
-			text = newline
+            text = newline
 
-			success_text = {
-				text = government_branches.1.desc.mining_guild_faction
-				is_pop_faction_type = mining_guild_faction
-			}
-			success_text = {
-				text = government_branches.1.desc.finisher
-			}
-		}
-	}
-	
-	picture = GFX_evt_galactic_senate
-	show_sound = event_factions
-	is_triggered_only = yes
+            # Civic faction middle desc
+            success_text = {
+                text = government_branches.1.desc.mining_association
+                is_pop_faction_type = mining_association
+            }
 
-	option = {
-		name = government_branches.1.a
-		hidden_effect = {
-			owner = {
-				every_owned_planet = {
-					every_owned_pop = {
-						force_faction_evaluation = yes
-					}
-				}
-			}
-		}
-	}
+            #text = newline
+
+            # Finisher
+            #success_text = {
+            #    text = government_branches.1.desc.finisher
+            #}
+        }
+    }
+    
+    picture = GFX_evt_galactic_senate
+    show_sound = event_factions
+    is_triggered_only = yes
+
+    option = {
+        name = government_branches.1.a
+        hidden_effect = {
+            owner = {
+                every_owned_planet = {
+                    every_owned_pop = {
+                        force_faction_evaluation = yes
+                    }
+                }
+            }
+        }
+    }
 }
