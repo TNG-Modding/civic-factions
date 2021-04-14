@@ -5,6 +5,6 @@
  government_branches.1.desc.finisher:0 "Our unique style of government is a model for the galaxy."
  government_branches.1.a:0 "Civic virtue is here."
 
- pft_mining_association:0 "Mining Guild Faction"
- pft_mining_association_desc:0 "The mining guild represents the many mining and extraction organizations across our empire."
- government_branches.1.desc.mining_association:0 "Wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officals in the §H[Root.Owner.GetName]§! have economic ties back to the §H[Root.GetName]§!, and it is only natural that their interests be officially represented in our government."
+ pft_mining_guild:0 "Mining Guild Faction"
+ pft_mining_guild_desc:0 "The mining guild represents the many mining and extraction organizations across our empire."
+ government_branches.1.desc.mining_guild:0 "Wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officals in the §H[Root.Owner.GetName]§! have economic ties back to the §H[Root.GetName]§!, and it is only natural that their interests be officially represented in our government."

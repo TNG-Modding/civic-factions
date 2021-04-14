@@ -1,6 +1,6 @@
 spriteTypes = {
 	spriteType = {
-        name = "GFX_faction_icon_mining_association"
+        name = "GFX_faction_icon_mining_guild"
         texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
         noOfFrames = 1
     }

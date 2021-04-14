@@ -1,8 +1,8 @@
 ##############################
-# mining_association Faction
+# mining_guild Faction
 ##############################
 
-mining_association = {
+mining_guild = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_militarist
 

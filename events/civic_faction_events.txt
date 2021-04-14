@@ -14,8 +14,8 @@ pop_faction_event = {
 
             # Civic faction middle desc
             success_text = {
-                text = government_branches.1.desc.mining_association
-                is_pop_faction_type = mining_association
+                text = government_branches.1.desc.mining_guild
+                is_pop_faction_type = mining_guild
             }
 
             #text = newline
