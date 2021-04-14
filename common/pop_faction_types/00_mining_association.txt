@@ -17,19 +17,18 @@ mining_association = {
 	}
 
 	is_potential = {
-		years_passed > 11
-		owner = { has_country_flag = first_faction } 
-		has_encountered_other_species = yes
-		OR = { 
-			has_ethic = ethic_fanatic_pacifist
-			has_ethic = ethic_pacifist
-		}
-		count_owned_pops = {
-			count >= 5
-			limit = {
-				has_ethic = ethic_militarist
-			}
-		}
+		#years_passed > 11
+		#owner = { has_country_flag = first_faction } 
+		#has_encountered_other_species = yes
+		
+		has_civic = civic_mining_guilds
+		
+		#count_owned_pops = {
+		#	count >= 5
+		#	limit = {
+		#		has_ethic = ethic_militarist
+		#	}
+		#}
 	}
 
 	parameters = {
@@ -53,10 +52,10 @@ mining_association = {
 	can_join_faction = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		#OR = {
+		#	has_ethic = ethic_militarist
+		#	has_ethic = ethic_fanatic_militarist
+		#}
 	}
 
 	attraction = {
