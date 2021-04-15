@@ -1,8 +1,8 @@
 ##############################
-# feudal_realm Faction
+# inwards_perfection Faction
 ##############################
 
-feudal_realm = {
+inwards_perfection = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_xenophobe
 
@@ -20,7 +20,7 @@ feudal_realm = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_feudal_realm
+		has_civic = civic_inwards_perfection
 		
 		count_owned_pops = {
 			count >= 1
