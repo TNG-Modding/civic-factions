@@ -1,8 +1,8 @@
 ##############################
-# philosopher_king Faction
+# feudal_realm Faction
 ##############################
 
-philosopher_king = {
+feudal_realm = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_authoritarian
 
@@ -20,7 +20,7 @@ philosopher_king = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_philosopher_king
+		has_civic = civic_feudal_realm
 		
 		count_owned_pops = {
 			count >= 1

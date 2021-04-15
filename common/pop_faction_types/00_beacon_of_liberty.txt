@@ -1,8 +1,8 @@
 ##############################
-# meritocracy Faction
+# beacon_of_liberty Faction
 ##############################
 
-meritocracy = {
+beacon_of_liberty = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_egalitarian
 
@@ -20,7 +20,7 @@ meritocracy = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_meritocracy
+		has_civic = civic_beacon_of_liberty
 		
 		count_owned_pops = {
 			count >= 1

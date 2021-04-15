@@ -1,10 +1,10 @@
 ##############################
-# philosopher_king Faction
+# technocracy Faction
 ##############################
 
-philosopher_king = {
+technocracy = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_authoritarian
+	guiding_ethic = ethic_materialist
 
 	unique = yes
 	support_multiplier = 1
@@ -20,12 +20,12 @@ philosopher_king = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_philosopher_king
+		has_civic = civic_technocracy
 		
 		count_owned_pops = {
 			count >= 1
 			limit = {
-				has_ethic = ethic_authoritarian
+				has_ethic = ethic_materialist
 			}
 		}
 	}
@@ -52,7 +52,7 @@ philosopher_king = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_authoritarian
+			has_ethic = ethic_materialist
 		}
 	}
 
