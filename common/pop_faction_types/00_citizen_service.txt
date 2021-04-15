@@ -1,10 +1,10 @@
 ##############################
-# imperial_cult Faction
+# citizen_service Faction
 ##############################
 
-imperial_cult = {
+citizen_service = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_spiritualist
+	guiding_ethic = ethic_militarist
 
 	unique = yes
 	support_multiplier = 1
@@ -20,12 +20,12 @@ imperial_cult = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_imperial_cult
+		has_civic = civic_citizen_service
 		
 		count_owned_pops = {
 			count >= 1
 			limit = {
-				has_ethic = ethic_spiritualist
+				has_ethic = ethic_militarist
 			}
 		}
 	}
@@ -52,7 +52,7 @@ imperial_cult = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_spiritualist
+			has_ethic = ethic_militarist
 		}
 	}
 

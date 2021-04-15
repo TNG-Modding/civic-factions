@@ -1,6 +1,6 @@
 
 ##############################
-# mining_guild Faction
+# slaver_guild Faction
 ##############################
 
 slaver_guild = {

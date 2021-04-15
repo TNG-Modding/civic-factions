@@ -1,5 +1,5 @@
 ##############################
-# mining_guild Faction
+# corvee_system Faction
 ##############################
 
 corvee_system = {

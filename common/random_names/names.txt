@@ -69,3 +69,75 @@ pop_faction_name_format = {
 	}
 	format = "<corvee_system_names>"
 }
+
+pop_faction_name_parts_list = {
+	key = "beacon_of_liberty_names"
+	parts = {
+		"Libertarian Party" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "beacon_of_liberty"
+		}
+	}
+	format = "<beacon_of_liberty_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "philosopher_king_names"
+	parts = {
+		"Philosophy Department" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "philosopher_king"
+		}
+	}
+	format = "<philosopher_king_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "meritocracy_names"
+	parts = {
+		"Government Exam Bureau" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "meritocracy"
+		}
+	}
+	format = "<meritocracy_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "citizen_service_names"
+	parts = {
+		"Citizen Service" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "citizen_service"
+		}
+	}
+	format = "<citizen_service_names>"
+}

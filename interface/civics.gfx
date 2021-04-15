@@ -22,4 +22,28 @@ spriteTypes = {
         texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
         noOfFrames = 1
     }
+
+    spriteType = {
+        name = "GFX_faction_icon_beacon_of_liberty"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_philosopher_king"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_meritocracy"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_citizen_service"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_imperialists.dds"
+        noOfFrames = 1
+    }
 }

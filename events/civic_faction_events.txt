@@ -32,6 +32,26 @@ pop_faction_event = {
                 text = government_branches.1.desc.corvee_system
                 is_pop_faction_type = corvee_system
             }
+
+            success_text = {
+                text = government_branches.1.desc.beacon_of_liberty
+                is_pop_faction_type = beacon_of_liberty
+            }
+
+            success_text = {
+                text = government_branches.1.desc.philosopher_king
+                is_pop_faction_type = philosopher_king
+            }
+
+            success_text = {
+                text = government_branches.1.desc.meritocracy
+                is_pop_faction_type = meritocracy
+            }
+
+            success_text = {
+                text = government_branches.1.desc.citizen_service
+                is_pop_faction_type = citizen_service
+            }
         }
     }
     
