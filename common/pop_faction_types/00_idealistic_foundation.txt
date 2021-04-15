@@ -1,8 +1,8 @@
 ##############################
-# idealist_foundation Faction
+# idealistic_foundation Faction
 ##############################
 
-idealist_foundation = {
+idealistic_foundation = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_egalitarian
 
@@ -20,7 +20,7 @@ idealist_foundation = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_idealist_foundation
+		has_civic = civic_idealistic_foundation
 		
 		count_owned_pops = {
 			count >= 1
