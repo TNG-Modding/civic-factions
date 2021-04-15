@@ -2,7 +2,7 @@
 # mining_guild Faction
 ##############################
 
-mining_guild = {
+corvee_system = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_authoritarian
 
@@ -20,7 +20,7 @@ mining_guild = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_mining_guilds
+		has_civic = civic_corvee_system
 		
 		count_owned_pops = {
 			count >= 1

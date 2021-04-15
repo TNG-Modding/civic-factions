@@ -2,9 +2,9 @@
 # mining_guild Faction
 ##############################
 
-mining_guild = {
+imperial_cult = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_authoritarian
+	guiding_ethic = ethic_spiritualist
 
 	unique = yes
 	support_multiplier = 1
@@ -20,12 +20,12 @@ mining_guild = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_mining_guilds
+		has_civic = civic_imperial_cult
 		
 		count_owned_pops = {
 			count >= 1
 			limit = {
-				has_ethic = ethic_authoritarian
+				has_ethic = ethic_spiritualist
 			}
 		}
 	}
@@ -52,7 +52,7 @@ mining_guild = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_authoritarian
+			has_ethic = ethic_spiritualist
 		}
 	}
 

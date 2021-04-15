@@ -15,3 +15,57 @@ pop_faction_name_format = {
 	}
 	format = "<mining_guild_names>"
 }
+
+pop_faction_name_parts_list = {
+	key = "slaver_guild_names"
+	parts = {
+		"Slaver Guild" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "slaver_guild"
+		}
+	}
+	format = "<slaver_guild_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "imperial_cult_names"
+	parts = {
+		"Imperial Cult" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "imperial_cult"
+		}
+	}
+	format = "<imperial_cult_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "corvee_system_names"
+	parts = {
+		"Corvee Bureau" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "corvee_system"
+		}
+	}
+	format = "<corvee_system_names>"
+}
