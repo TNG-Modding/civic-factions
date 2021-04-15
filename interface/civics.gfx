@@ -1,0 +1,25 @@
+spriteTypes = {
+	spriteType = {
+        name = "GFX_faction_icon_mining_guild"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_slaver_guild"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_imperial_cult"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_corvee_system"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+        noOfFrames = 1
+    }
+}
