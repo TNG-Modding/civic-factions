@@ -17,13 +17,6 @@ pop_faction_event = {
                 text = government_branches.1.desc.mining_guild
                 is_pop_faction_type = mining_guild
             }
-
-            #text = newline
-
-            # Finisher
-            #success_text = {
-            #    text = government_branches.1.desc.finisher
-            #}
         }
     }
     

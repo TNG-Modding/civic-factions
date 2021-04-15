@@ -18,17 +18,16 @@ mining_guild = {
 
 	is_potential = {
 		#years_passed > 11
-		#owner = { has_country_flag = first_faction } 
 		#has_encountered_other_species = yes
 		
 		has_civic = civic_mining_guilds
 		
-		#count_owned_pops = {
-		#	count >= 5
-		#	limit = {
-		#		has_ethic = ethic_militarist
-		#	}
-		#}
+		count_owned_pops = {
+			count >= 1
+			limit = {
+				has_ethic = ethic_authoritarian
+			}
+		}
 	}
 
 	parameters = {
@@ -52,10 +51,9 @@ mining_guild = {
 	can_join_faction = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
-		#OR = {
-		#	has_ethic = ethic_militarist
-		#	has_ethic = ethic_fanatic_militarist
-		#}
+		OR = {
+			has_ethic = ethic_authoritarian
+		}
 	}
 
 	attraction = {
@@ -90,31 +88,6 @@ mining_guild = {
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
-		}
-	}
-	demand = {
-		title = "IMPERIALIST_CONQUEST"
-		unfulfilled_title = "IMPERIALIST_NO_CONQUEST"
-		desc = "IMPERIALIST_CONQUEST_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				any_relation = {
-					has_communications = root.owner
-					is_country_type = default
-					NOT = { exists = overlord }
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_country_flag = imperialist_conquest_timed_flag
-			}
 		}
 	}
 }
