@@ -17,9 +17,9 @@ pop_faction_name_format = {
 }
 
 pop_faction_name_parts_list = {
-	key = "mining_guild_names"
+	key = "aristocratic_elite_names"
 	parts = {
-		"Mining Guild" = 1
+		"Noble Houses" = 1
 	}
 }
 
@@ -28,16 +28,16 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "mining_guild"
+			is_pop_faction_type = "aristocratic_elite"
 		}
 	}
-	format = "<mining_guild_names>"
+	format = "<aristocratic_elite_names>"
 }
 
 pop_faction_name_parts_list = {
-	key = "slaver_guild_names"
+	key = "barbaric_despoilers_names"
 	parts = {
-		"Slaver Guild" = 1
+		"Looter Clans" = 1
 	}
 }
 
@@ -46,16 +46,16 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "slaver_guild"
+			is_pop_faction_type = "barbaric_despoilers"
 		}
 	}
-	format = "<slaver_guild_names>"
+	format = "<barbaric_despoilers_names>"
 }
 
 pop_faction_name_parts_list = {
-	key = "imperial_cult_names"
+	key = "beacon_of_liberty_names"
 	parts = {
-		"Imperial Cult" = 1
+		"Liberty Commission" = 1
 	}
 }
 
@@ -64,10 +64,64 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "imperial_cult"
+			is_pop_faction_type = "beacon_of_liberty"
 		}
 	}
-	format = "<imperial_cult_names>"
+	format = "<beacon_of_liberty_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "byzantine_bureaucracy_names"
+	parts = {
+		"Bureau of Bureau Affairs" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "byzantine_bureaucracy"
+		}
+	}
+	format = "<byzantine_bureaucracy_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "citizen_service_names"
+	parts = {
+		"Service Franchise Bureau" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "citizen_service"
+		}
+	}
+	format = "<citizen_service_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "corporate_dominion_names"
+	parts = {
+		"Galaxification Committee" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "corporate_dominion"
+		}
+	}
+	format = "<corporate_dominion_names>"
 }
 
 pop_faction_name_parts_list = {
@@ -89,9 +143,9 @@ pop_faction_name_format = {
 }
 
 pop_faction_name_parts_list = {
-	key = "beacon_of_liberty_names"
+	key = "cutthroat_politics_names"
 	parts = {
-		"Libertarian Party" = 1
+		"Electoral College" = 1
 	}
 }
 
@@ -100,16 +154,16 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "beacon_of_liberty"
+			is_pop_faction_type = "cutthroat_politics"
 		}
 	}
-	format = "<beacon_of_liberty_names>"
+	format = "<cutthroat_politics_names>"
 }
 
 pop_faction_name_parts_list = {
-	key = "philosopher_king_names"
+	key = "death_cult_names"
 	parts = {
-		"Philosophy Department" = 1
+		"Death Cult" = 1
 	}
 }
 
@@ -118,10 +172,280 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "philosopher_king"
+			is_pop_faction_type = "death_cult"
 		}
 	}
-	format = "<philosopher_king_names>"
+	format = "<death_cult_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "diplomatic_corps_names"
+	parts = {
+		"Bureau of Foreign Policy" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "diplomatic_corps"
+		}
+	}
+	format = "<diplomatic_corps_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "distinguished_admiralty_names"
+	parts = {
+		"Admiralty" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "distinguished_admiralty"
+		}
+	}
+	format = "<distinguished_admiralty_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "efficient_bureaucracy_names"
+	parts = {
+		"Bureau of Internal Affairs" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "efficient_bureaucracy"
+		}
+	}
+	format = "<efficient_bureaucracy_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "environmentalist_names"
+	parts = {
+		"Conservation Bureau" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "environmentalist"
+		}
+	}
+	format = "<environmentalist_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "exalted_priesthood_names"
+	parts = {
+		"College of Cardinals" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "exalted_priesthood"
+		}
+	}
+	format = "<exalted_priesthood_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "fanatic_purifiers_names"
+	parts = {
+		"Eugenics and Purity Bureau" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "fanatic_purifiers"
+		}
+	}
+	format = "<fanatic_purifiers_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "feudal_realm_names"
+	parts = {
+		"Xeno Commonwealth" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "feudal_realm"
+		}
+	}
+	format = "<feudal_realm_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "free_haven_names"
+	parts = {
+		"Bureau of Immigration" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "free_haven"
+		}
+	}
+	format = "<free_haven_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "functional_architecture_names"
+	parts = {
+		"Bureau of Out-System Infrastructure" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "functional_architecture"
+		}
+	}
+	format = "<functional_architecture_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "idealistic_foundation_names"
+	parts = {
+		"Conservatives" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "idealistic_foundation"
+		}
+	}
+	format = "<idealistic_foundation_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "idealistic_foundation_names"
+	parts = {
+		"Conservatives" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "idealistic_foundation"
+		}
+	}
+	format = "<idealistic_foundation_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "imperial_cult_names"
+	parts = {
+		"Imperial Cult" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "imperial_cult"
+		}
+	}
+	format = "<imperial_cult_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "inwards_perfection_names"
+	parts = {
+		"Bureau of Foreign Tribute Missions" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "inwards_perfection"
+		}
+	}
+	format = "<inwards_perfection_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "memorialist_names"
+	parts = {
+		"Entropy Containment Bureau" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "memorialist"
+		}
+	}
+	format = "<memorialist_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "merchant_guilds_names"
+	parts = {
+		"Merchant Guilds" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "merchant_guilds"
+		}
+	}
+	format = "<merchant_guilds_names>"
 }
 
 pop_faction_name_parts_list = {
@@ -143,9 +467,9 @@ pop_faction_name_format = {
 }
 
 pop_faction_name_parts_list = {
-	key = "citizen_service_names"
+	key = "mining_guild_names"
 	parts = {
-		"Citizen Service" = 1
+		"Mining Guild" = 1
 	}
 }
 
@@ -154,8 +478,189 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "citizen_service"
+			is_pop_faction_type = "mining_guild"
 		}
 	}
-	format = "<citizen_service_names>"
+	format = "<mining_guild_names>"
 }
+
+pop_faction_name_parts_list = {
+	key = "nationalistic_zeal_names"
+	parts = {
+		"Ministry of Truth" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "nationalistic_zeal"
+		}
+	}
+	format = "<nationalistic_zeal_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "parliamentary_system_names"
+	parts = {
+		"Parliament" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "parliamentary_system"
+		}
+	}
+	format = "<parliamentary_system_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "philosopher_king_names"
+	parts = {
+		"Philosophy Bureau" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "philosopher_king"
+		}
+	}
+	format = "<philosopher_king_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "police_state_names"
+	parts = {
+		"Bureau of Justice" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "police_state"
+		}
+	}
+	format = "<police_state_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "reanimated_armies_names"
+	parts = {
+		"Bureau of Health and Longevity" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "reanimated_armies"
+		}
+	}
+	format = "<reanimated_armies_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "shadow_council_names"
+	parts = {
+		"Free Illumination Society" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "shadow_council"
+		}
+	}
+	format = "<shadow_council_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "shared_burden_names"
+	parts = {
+		"Communist Front" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "shared_burden"
+		}
+	}
+	format = "<shared_burden_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "slaver_guild_names"
+	parts = {
+		"Slaver Guild" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "slaver_guild"
+		}
+	}
+	format = "<slaver_guild_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "technocracy_names"
+	parts = {
+		"Bureau of Education" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "technocracy"
+		}
+	}
+	format = "<technocracy_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "warrior_culture_names"
+	parts = {
+		"Bureau of Duels and Live Sport" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "warrior_culture"
+		}
+	}
+	format = "<warrior_culture_names>"
+}
+
