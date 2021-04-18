@@ -22,7 +22,7 @@ mining_guild = {
 		
 		has_civic = civic_mining_guilds
 		
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 1
 			limit = {
 				has_ethic = ethic_authoritarian

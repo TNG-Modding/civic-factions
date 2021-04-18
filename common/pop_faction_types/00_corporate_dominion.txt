@@ -22,7 +22,7 @@ corporate_dominion = {
 		
 		has_civic = civic_corporate_dominion
 		
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 1
 			limit = {
 				has_ethic = ethic_xenophile

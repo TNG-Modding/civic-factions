@@ -22,7 +22,7 @@ cutthroat_politics = {
 		
 		has_civic = civic_cutthroat_politics
 		
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 1
 			limit = {
 				has_ethic = ethic_egalitarian

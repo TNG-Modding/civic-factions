@@ -22,7 +22,7 @@ shadow_council = {
 		
 		has_civic = civic_shadow_council
 		
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 1
 			limit = {
 				has_ethic = ethic_authoritarian
