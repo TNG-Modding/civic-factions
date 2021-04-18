@@ -3,40 +3,148 @@
  government_branches.1.name:0 "Government Branch Founded"
  government_branches.1.desc.start:0 "The §H[Root.GetName]§! led by §H[Root.Leader.GetTitle] [Root.Leader.GetName]§! has established themselves in the §H[Root.Owner.GetName]§!. As a distinct wing of our government, their interests hold a priviledged position in political discourse."
  government_branches.1.desc.finisher:0 "Our unique style of government is a model for the galaxy."
- government_branches.1.a:0 "Civic virtue is here."
+ government_branches.1.a:0 "Civic virtue is here." 
 
  pft_agrarian_idyll:0 "Agrarian Idyll Faction"
  pft_agrarian_idyll_desc:0 "The agrarian idyll "
  government_branches.1.desc.agrarian_idyll:0 "In our society, we avoid urbanization."
 
- pft_mining_guild:0 "Mining Guild Faction"
- pft_mining_guild_desc:0 "The mining guild faction represents the many mining and extraction organizations across our empire."
- government_branches.1.desc.mining_guild:0 "In our society, wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officals in the §H[Root.Owner.GetName]§! have economic ties back to the §H[Root.GetName]§!, and it is only natural that their interests be officially represented in our government."
+ government_branches.1.desc.aristocratic_elite:0 "In our society"
+ pft_aristocratic_elite:0 "Aristocratic Elite Faction"
+ pft_aristocratic_elite_desc:0 "The aristocratic elite faction."
 
- pft_slaver_guild:0 "Slaver Guild Faction"
- pft_slaver_guild_desc:0 "The slaver guild faction represents large holder of slaves across our empire. Concentric rings of slaveholders hold other slaveholders in various forms of bondage."
- government_branches.1.desc.slaver_guild:0 "In our society, rights might better be understood as a series of obligations. Even our highest government officals have long term obligations spelled out in contracts kept safe within the confines of the §H[Root.GetName]§! headquarters."
+ government_branches.1.desc.barbaric_despoilers:0 "In our society"
+ pft_barbaric_despoilers:0 "Barbaric Despoilers Faction"
+ pft_barbaric_despoilers_desc:0 "The barbaric despoilers faction."
 
- pft_imperial_cult:0 "Imperial Cult Faction"
- pft_imperial_cult_desc:0 "The imperial cult faction represents the entrenched priesthood emanating from the office of the emperor. Priest and politician merge as the all government acts must link to official imperial declarations of divine intent."
- government_branches.1.desc.imperial_cult:0 "In our society, truth and profit and purpose flow from the will of our leader both practically and technically. Through surrendering to the emperor's will, profane acts can be made divine and societal advancement assured."
+ government_branches.1.desc.beacon_of_liberty:0 "In our society"
+ pft_beacon_of_liberty:0 "Beacon of Liberty Faction"
+ pft_beacon_of_liberty_desc:0 "The beacon of liberty faction."
+
+ government_branches.1.desc.byzantine_bureaucracy:0 "In our society"
+ pft_byzantine_bureaucracy:0 "Byzantine Bureaucracy Faction"
+ pft_byzantine_bureaucracy_desc:0 "The byzantine bureaucracy faction."
+
+ government_branches.1.desc.citizen_service:0 "In our society"
+ pft_citizen_service:0 "Citizen Service Faction"
+ pft_citizen_service_desc:0 "The citizen service faction."
+
+ government_branches.1.desc.corporate_dominion:0 "In our society"
+ pft_corporate_dominion:0 "Corporate Dominion Faction"
+ pft_corporate_dominion_desc:0 "The corporate dominion faction."
 
  pft_corvee_system:0 "Corvee System Faction"
  pft_corvee_system_desc:0 "The corvee system faction is network of officials dedicated to maximizing the effective utilization of the labor pool. Advancement and favor go to those who can squeeze the most out of their assigned pools while minimizing travel requirements."
  government_branches.1.desc.corvee_system:0 "In our society, labor is synonymous with travelling. By the end of a term off-system, a laborer might have built a starship, mined for motes, or subdued alien wildlife in the service of extending our empire to foreign planets."
 
- pft_beacon_of_liberty:0 "Beacon of Liberty Faction"
- pft_beacon_of_liberty_desc:0 "The beacon of liberty faction."
- government_branches.1.desc.beacon_of_liberty:0 "In our society, people have liberty."
+ government_branches.1.desc.cutthroat_politics:0 "In our society"
+ pft_cutthroat_politics:0 "Cutthroat Politics Faction"
+ pft_cutthroat_politics_desc:0 "The cutthroat politics faction."
 
- pft_philosopher_king:0 "Philosopher King Faction"
- pft_philosopher_king_desc:0 "The philosopher king faction."
- government_branches.1.desc.philosopher_king:0 "In our society, we like philosophy."
+ government_branches.1.desc.death_cult:0 "In our society"
+ pft_death_cult:0 "Death Cult Faction"
+ pft_death_cult_desc:0 "The death cult faction."
 
+ government_branches.1.desc.diplomatic_corps:0 "In our society"
+ pft_diplomatic_corps:0 "Diplomatic Corps Faction"
+ pft_diplomatic_corps_desc:0 "The diplomatic corps faction."
+
+ government_branches.1.desc.distinguished_admiralty:0 "In our society"
+ pft_distinguished_admiralty:0 "Distinguished Admiralty Faction"
+ pft_distinguished_admiralty_desc:0 "The distinguished admiralty faction."
+
+ government_branches.1.desc.efficient_bureaucracy:0 "In our society"
+ pft_efficient_bureaucracy:0 "Efficient Bureaucracy Faction"
+ pft_efficient_bureaucracy_desc:0 "The efficient bureaucracy faction."
+
+ government_branches.1.desc.environmentalist:0 "In our society"
+ pft_environmentalist:0 "Environmentalist Faction"
+ pft_environmentalist_desc:0 "The environmentalist faction."
+
+ government_branches.1.desc.exalted_priesthood:0 "In our society"
+ pft_exalted_priesthood:0 "Exalted Priesthood Faction"
+ pft_exalted_priesthood_desc:0 "The exalted priesthood faction."
+
+ government_branches.1.desc.fanatic_purifiers:0 "In our society"
+ pft_fanatic_purifiers:0 "Fanatic Purifiers Faction"
+ pft_fanatic_purifiers_desc:0 "The fanatic purifiers faction."
+
+ government_branches.1.desc.feudal_realm:0 "In our society"
+ pft_feudal_realm:0 "Fuedal Realm Faction"
+ pft_feudal_realm_desc:0 "The fuedal realm faction."
+
+ government_branches.1.desc.free_haven:0 "In our society"
+ pft_free_haven:0 "Free Haven Faction"
+ pft_free_haven_desc:0 "The free haven faction."
+
+ government_branches.1.desc.functional_architecture:0 "In our society"
+ pft_functional_architecture:0 "Functional Architecture Faction"
+ pft_functional_architecture_desc:0 "The functional architecture faction."
+
+ government_branches.1.desc.idealistic_foundation:0 "In our society"
+ pft_idealistic_foundation:0 "Idealistic Foundation Faction"
+ pft_idealistic_foundation_desc:0 "The idealistic foundation faction."
+
+ government_branches.1.desc.inwards_perfection:0 "In our society"
+ pft_inwards_perfection:0 "Inwards Perfection Faction"
+ pft_inwards_perfection_desc:0 "The inwards perfection faction."
+
+ pft_imperial_cult:0 "Imperial Cult Faction"
+ pft_imperial_cult_desc:0 "The imperial cult faction represents the entrenched priesthood emanating from the office of the emperor. Priest and politician merge as the all government acts must link to official imperial declarations of divine intent."
+ government_branches.1.desc.imperial_cult:0 "In our society, truth and profit and purpose flow from the will of our leader both practically and technically. Through surrendering to the emperor's will, profane acts can be made divine and societal advancement assured."
+
+ government_branches.1.desc.meritocracy:0 "In our society"
  pft_meritocracy:0 "Meritocracy Faction"
  pft_meritocracy_desc:0 "The meritocracy faction."
- government_branches.1.desc.meritocracy:0 "In our society, we take tests."
 
- pft_citizen_service:0 "Citizen Service Faction"
- pft_citizen_service_desc:0 "The citizen service faction."
- government_branches.1.desc.citizen_service:0 "In our society, we give service to military personnel."
+ pft_mining_guild:0 "Mining Guild Faction"
+ pft_mining_guild_desc:0 "The mining guild faction represents the many mining and extraction organizations across our empire."
+ government_branches.1.desc.mining_guild:0 "In our society, wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officals in the §H[Root.Owner.GetName]§! have economic ties back to the §H[Root.GetName]§!, and it is only natural that their interests be officially represented in our government."
+
+ government_branches.1.desc.memorialist:0 "In our society"
+ pft_memorialist:0 "Memorialist Faction"
+ pft_memorialist_desc:0 "The memorialist faction."
+
+ government_branches.1.desc.merchant_guilds:0 "In our society"
+ pft_merchant_guilds:0 "Merchant Guilds Faction"
+ pft_merchant_guilds_desc:0 "The merchant guilds faction."
+
+ government_branches.1.desc.nationalistic_zeal:0 "In our society"
+ pft_nationalistic_zeal:0 "Nationalistic Zeal Faction"
+ pft_nationalistic_zeal_desc:0 "The nationalistic zeal faction."
+
+ government_branches.1.desc.parliamentary_system:0 "In our society"
+ pft_parliamentary_system:0 "Parliamentary Faction"
+ pft_parliamentary_system_desc:0 "The parliamentary faction."
+
+ government_branches.1.desc.philosopher_king:0 "In our society"
+ pft_philosopher_king:0 "Philosopher King Faction"
+ pft_philosopher_king_desc:0 "The philosopher king faction."
+
+ government_branches.1.desc.police_state:0 "In our society"
+ pft_police_state:0 "Police State Faction"
+ pft_police_state_desc:0 "The police state faction."
+
+ government_branches.1.desc.reanimated_armies:0 "In our society"
+ pft_reanimated_armies:0 "Reanimated Armies Faction"
+ pft_reanimated_armies_desc:0 "The reanimated armies faction."
+
+ government_branches.1.desc.shadow_council:0 "In our society"
+ pft_shadow_council:0 "Shadow Council Faction"
+ pft_shadow_council_desc:0 "The shadow council faction."
+
+ government_branches.1.desc.shared_burden:0 "In our society"
+ pft_shared_burden:0 "Shared Burden Faction"
+ pft_shared_burden_desc:0 "The shared burden faction."
+
+ pft_slaver_guild:0 "Slaver Guild Faction"
+ pft_slaver_guild_desc:0 "The slaver guild faction represents large holder of slaves across our empire. Concentric rings of slaveholders hold other slaveholders in various forms of bondage."
+ government_branches.1.desc.slaver_guild:0 "In our society, rights might better be understood as a series of obligations. Even our highest government officals have long term obligations spelled out in contracts kept safe within the confines of the §H[Root.GetName]§! headquarters."
+
+ government_branches.1.desc.technocracy:0 "In our society"
+ pft_technocracy:0 "Technocracy Faction"
+ pft_technocracy_desc:0 "The technocracy faction."
+
+ government_branches.1.desc.warrior_culture:0 "In our society"
+ pft_warrior_culture:0 "Warrior Culture Faction"
+ pft_warrior_culture_desc:0 "The warrior culture faction."
