@@ -5,34 +5,38 @@
  government_branches.1.desc.finisher:0 "Our unique style of government is a model for the galaxy."
  government_branches.1.a:0 "Civic virtue is here."
 
+ pft_agrarian_idyll:0 "Agrarian Idyll Faction"
+ pft_agrarian_idyll_desc:0 "The agrarian idyll "
+ government_branches.1.desc.agrarian_idyll:0 "In our society, we avoid urbanization."
+
  pft_mining_guild:0 "Mining Guild Faction"
- pft_mining_guild_desc:0 "The mining guild represents the many mining and extraction organizations across our empire."
+ pft_mining_guild_desc:0 "The mining guild faction represents the many mining and extraction organizations across our empire."
  government_branches.1.desc.mining_guild:0 "In our society, wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officals in the §H[Root.Owner.GetName]§! have economic ties back to the §H[Root.GetName]§!, and it is only natural that their interests be officially represented in our government."
 
  pft_slaver_guild:0 "Slaver Guild Faction"
- pft_slaver_guild_desc:0 "The slaver guild represents large holder of slaves across our empire. Concentric rings of slaveholders hold other slaveholders in various forms of bondage."
+ pft_slaver_guild_desc:0 "The slaver guild faction represents large holder of slaves across our empire. Concentric rings of slaveholders hold other slaveholders in various forms of bondage."
  government_branches.1.desc.slaver_guild:0 "In our society, rights might better be understood as a series of obligations. Even our highest government officals have long term obligations spelled out in contracts kept safe within the confines of the §H[Root.GetName]§! headquarters."
 
  pft_imperial_cult:0 "Imperial Cult Faction"
- pft_imperial_cult_desc:0 "The imperial cult represents the entrenched priesthood emanating from the office of the emperor. Priest and politician merge as the all government acts must link to official imperial declarations of divine intent."
+ pft_imperial_cult_desc:0 "The imperial cult faction represents the entrenched priesthood emanating from the office of the emperor. Priest and politician merge as the all government acts must link to official imperial declarations of divine intent."
  government_branches.1.desc.imperial_cult:0 "In our society, truth and profit and purpose flow from the will of our leader both practically and technically. Through surrendering to the emperor's will, profane acts can be made divine and societal advancement assured."
 
  pft_corvee_system:0 "Corvee System Faction"
- pft_corvee_system_desc:0 "The corvee bureau is network of officials dedicated to maximizing the effective utilization of the labor pool. Advancement and favor go to those who can squeeze the most out of their assigned pools while minimizing travel requirements."
+ pft_corvee_system_desc:0 "The corvee system faction is network of officials dedicated to maximizing the effective utilization of the labor pool. Advancement and favor go to those who can squeeze the most out of their assigned pools while minimizing travel requirements."
  government_branches.1.desc.corvee_system:0 "In our society, labor is synonymous with travelling. By the end of a term off-system, a laborer might have built a starship, mined for motes, or subdued alien wildlife in the service of extending our empire to foreign planets."
 
  pft_beacon_of_liberty:0 "Beacon of Liberty Faction"
- pft_beacon_of_liberty_desc:0 "The libertarian party."
+ pft_beacon_of_liberty_desc:0 "The beacon of liberty faction."
  government_branches.1.desc.beacon_of_liberty:0 "In our society, people have liberty."
 
  pft_philosopher_king:0 "Philosopher King Faction"
- pft_philosopher_king_desc:0 "The philosophy department."
+ pft_philosopher_king_desc:0 "The philosopher king faction."
  government_branches.1.desc.philosopher_king:0 "In our society, we like philosophy."
 
  pft_meritocracy:0 "Meritocracy Faction"
- pft_meritocracy_desc:0 "The government exam bureau."
+ pft_meritocracy_desc:0 "The meritocracy faction."
  government_branches.1.desc.meritocracy:0 "In our society, we take tests."
 
  pft_citizen_service:0 "Citizen Service Faction"
- pft_citizen_service_desc:0 "The citizen service."
+ pft_citizen_service_desc:0 "The citizen service faction."
  government_branches.1.desc.citizen_service:0 "In our society, we give service to military personnel."

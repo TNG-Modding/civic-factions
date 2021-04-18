@@ -1,4 +1,10 @@
 spriteTypes = {
+    spriteType = {
+        name = "GFX_faction_icon_agrarian_idyll"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
+        noOfFrames = 1
+    }
+
 	spriteType = {
         name = "GFX_faction_icon_mining_guild"
         texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"

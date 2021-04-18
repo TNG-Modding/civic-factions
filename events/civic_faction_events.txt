@@ -14,6 +14,11 @@ pop_faction_event = {
 
             # Civic faction middle desc
             success_text = {
+                text = government_branches.1.desc.agrarian_idyll
+                is_pop_faction_type = agrarian_idyll
+            }
+
+            success_text = {
                 text = government_branches.1.desc.mining_guild
                 is_pop_faction_type = mining_guild
             }

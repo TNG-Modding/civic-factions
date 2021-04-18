@@ -1,4 +1,22 @@
 pop_faction_name_parts_list = {
+	key = "agrarian_idyll_names"
+	parts = {
+		"Agrarian Union" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "agrarian_idyll"
+		}
+	}
+	format = "<agrarian_idyll_names>"
+}
+
+pop_faction_name_parts_list = {
 	key = "mining_guild_names"
 	parts = {
 		"Mining Guild" = 1
