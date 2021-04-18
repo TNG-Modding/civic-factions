@@ -1,10 +1,11 @@
+
 ##############################
-# memorialist Faction
+# exalted_priesthood Faction
 ##############################
 
-memorialist = {
+exalted_priesthood = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_materialist
+	guiding_ethic = ethic_spiritualist
 
 	unique = yes
 	support_multiplier = 1
@@ -20,12 +21,12 @@ memorialist = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_memorialist
+		has_civic = civic_exalted_priesthood
 		
 		count_owned_pops = {
 			count >= 1
 			limit = {
-				has_ethic = ethic_materialist
+				has_ethic = ethic_spiritualist
 			}
 		}
 	}
@@ -52,7 +53,7 @@ memorialist = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_materialist
+			has_ethic = ethic_spiritualist
 		}
 	}
 
