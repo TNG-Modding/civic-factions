@@ -20,7 +20,16 @@ agrarian_idyll = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_agrarian_idyll
+		OR = {
+			has_ethic = ethic_fanatic_pacifist
+			has_ethic = ethic_pacifist
+		}
+		NOR = {
+			has_origin = origin_post_apocalyptic
+			has_origin = origin_shattered_ring
+			has_origin = origin_void_dwellers
+			has_origin = origin_remnants
+		}	
 		
 		count_owned_pop = {
 			count >= 1

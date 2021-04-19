@@ -19,9 +19,7 @@ byzantine_bureaucracy = {
 	is_potential = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
-		
-		has_civic = civic_byzantine_bureaucracy
-		
+
 		count_owned_pop = {
 			count >= 1
 			limit = {

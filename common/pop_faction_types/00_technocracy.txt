@@ -20,7 +20,14 @@ technocracy = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_technocracy
+		has_ethic = ethic_fanatic_materialist
+		
+		NOR = {
+			has_civic = civic_merchant_guilds
+			has_civic = civic_exalted_priesthood
+			has_civic = civic_aristocratic_elite
+		}
+		
 		
 		count_owned_pop = {
 			count >= 1

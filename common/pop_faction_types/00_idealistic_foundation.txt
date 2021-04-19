@@ -20,8 +20,11 @@ idealistic_foundation = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_idealistic_foundation
-		
+		OR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
+
 		count_owned_pop = {
 			count >= 1
 			limit = {

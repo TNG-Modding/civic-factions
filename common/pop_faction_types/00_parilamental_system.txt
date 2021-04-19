@@ -20,7 +20,7 @@ parliamentary_system = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_parliamentary_system
+		has_authority = auth_democratic
 		
 		count_owned_pop = {
 			count >= 1

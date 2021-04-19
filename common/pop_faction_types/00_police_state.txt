@@ -20,7 +20,9 @@ police_state = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_police_state
+		NOT = {
+			has_ethic = ethic_fanatic_egalitarian
+		}
 		
 		count_owned_pop = {
 			count >= 1

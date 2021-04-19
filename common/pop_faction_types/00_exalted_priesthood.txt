@@ -21,7 +21,21 @@ exalted_priesthood = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_exalted_priesthood
+		OR = {
+			has_ethic = ethic_fanatic_spiritualist
+			has_ethic = ethic_spiritualist
+		}
+
+		OR = {
+			has_authority = auth_oligarchic
+			has_authority = auth_dictatorial
+		}
+
+		NOR = {
+			has_civic = civic_merchant_guilds
+			has_civic = civic_aristocratic_elite
+			has_civic = civic_technocracy
+		}
 		
 		count_owned_pop = {
 			count >= 1

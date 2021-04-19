@@ -20,7 +20,9 @@ memorialist = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_memorialist
+		NOT = {
+			has_civic = civic_fanatic_purifiers
+		}
 		
 		count_owned_pop = {
 			count >= 1

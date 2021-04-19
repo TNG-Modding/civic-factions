@@ -20,7 +20,19 @@ inwards_perfection = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_inwards_perfection
+		
+		OR = {
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
+		}
+		OR = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		NOR = {
+			has_origin = origin_common_ground
+			has_origin = origin_hegemon
+		}
 		
 		count_owned_pop = {
 			count >= 1

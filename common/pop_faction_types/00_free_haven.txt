@@ -20,7 +20,13 @@ free_haven = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_free_haven
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+		NOT = {
+			has_civic = civic_corvee_system
+		}
 		
 		count_owned_pop = {
 			count >= 1

@@ -20,7 +20,7 @@ feudal_realm = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_feudal_realm
+		has_authority = auth_imperial
 		
 		count_owned_pop = {
 			count >= 1

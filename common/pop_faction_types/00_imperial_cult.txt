@@ -20,7 +20,15 @@ imperial_cult = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_imperial_cult
+		has_authority = auth_imperial
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
 		
 		count_owned_pop = {
 			count >= 1

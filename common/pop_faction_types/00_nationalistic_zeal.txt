@@ -20,7 +20,10 @@ nationalistic_zeal = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_nationalistic_zeal
+		OR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+		}
 		
 		count_owned_pop = {
 			count >= 1

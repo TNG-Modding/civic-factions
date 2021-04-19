@@ -20,7 +20,10 @@ diplomatic_corps = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_diplomatic_corps
+		NOR = {
+			has_civic = civic_fanatic_purifiers
+			has_civic = civic_inwards_perfection
+		}
 		
 		count_owned_pop = {
 			count >= 1

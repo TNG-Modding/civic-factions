@@ -21,7 +21,10 @@ slaver_guild = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_slaver_guilds
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+		}
 		
 		count_owned_pop = {
 			count >= 1

@@ -20,7 +20,18 @@ citizen_service = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_citizen_service
+		OR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+		}
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_oligarchic
+		}
+		NOR = {
+			has_civic = civic_reanimated_armies
+			has_ethic = ethic_fanatic_xenophile
+		}
 		
 		count_owned_pop = {
 			count >= 1

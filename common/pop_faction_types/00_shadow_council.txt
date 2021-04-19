@@ -20,7 +20,11 @@ shadow_council = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_shadow_council
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_oligarchic
+			has_authority = auth_dictatorial
+		}
 		
 		count_owned_pop = {
 			count >= 1

@@ -20,7 +20,10 @@ philosopher_king = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
 		
-		has_civic = civic_philosopher_king
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_imperial
+		}
 		
 		count_owned_pop = {
 			count >= 1
