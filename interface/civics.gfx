@@ -96,7 +96,7 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = "GFX_faction_icon_fuedal_realm"
+        name = "GFX_faction_icon_feudal_realm"
         texturefile = "gfx/interface/icons/faction_icons/faction_icons_xenoists.dds"
         noOfFrames = 1
     }
