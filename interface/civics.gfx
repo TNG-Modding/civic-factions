@@ -5,21 +5,51 @@ spriteTypes = {
         noOfFrames = 1
     }
 
-	spriteType = {
-        name = "GFX_faction_icon_mining_guild"
+    spriteType = {
+        name = "GFX_faction_icon_agrarian_idyll"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_agrarian_idyll"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_aristocratic_elite"
         texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
         noOfFrames = 1
     }
 
     spriteType = {
-        name = "GFX_faction_icon_slaver_guild"
-        texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+        name = "GFX_faction_icon_barbaric_despoilers"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_imperialists.dds"
         noOfFrames = 1
     }
 
     spriteType = {
-        name = "GFX_faction_icon_imperial_cult"
-        texturefile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
+        name = "GFX_faction_icon_beacon_of_liberty"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_byzantine_bureaucracy"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_citizen_service"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_imperialists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_corporate_dominion"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
         noOfFrames = 1
     }
 
@@ -30,7 +60,121 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = "GFX_faction_icon_beacon_of_liberty"
+        name = "GFX_faction_icon_cutthroat_politics"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_death_cult"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_diplomatic_corps"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_xenoists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_distinguished_admiralty"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_imperialists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_efficient_bureaucracy"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_environmentalist"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
+        noOfFrames = 1
+    }
+
+	spriteType = {
+        name = "GFX_faction_icon_exalted_priesthood"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_fanatic_purifiers"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_supremacists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_fuedal_realm"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
+        noOfFrames = 1
+    }
+    
+    spriteType = {
+        name = "GFX_faction_icon_free_haven"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_xenoists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_functional_architecture"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_idealistic_foundation"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_imperial_cult"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_traditionalists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_inwards_perfection"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_isolationists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_memorialist"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_technologists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_merchant_guilds"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_prosperity.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_meritocracy"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_mining_guild"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+        noOfFrames = 1
+    }
+    
+    spriteType = {
+        name = "GFX_faction_icon_nationalistic_zeal"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_imperialists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_parliamentary_system"
         texturefile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
         noOfFrames = 1
     }
@@ -42,13 +186,43 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = "GFX_faction_icon_meritocracy"
+        name = "GFX_faction_icon_police_state"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_isolationists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_reanimated_armies"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_technologists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_shadow_council"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_shared_burden"
         texturefile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
         noOfFrames = 1
     }
 
     spriteType = {
-        name = "GFX_faction_icon_citizen_service"
+        name = "GFX_faction_icon_slaver_guild"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_totalitarians.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_technocracy"
+        texturefile = "gfx/interface/icons/faction_icons/faction_icons_technologists.dds"
+        noOfFrames = 1
+    }
+
+    spriteType = {
+        name = "GFX_faction_icon_warrior_culture"
         texturefile = "gfx/interface/icons/faction_icons/faction_icons_imperialists.dds"
         noOfFrames = 1
     }
