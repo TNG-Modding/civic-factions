@@ -20,6 +20,10 @@ exalted_priesthood = {
 	is_potential = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
+		NOR = {
+			has_authority = auth_corporate 
+			has_ethic = ethic_gestalt_consciousness
+		} 
 		
 		OR = {
 			has_ethic = ethic_fanatic_spiritualist

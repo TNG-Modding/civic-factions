@@ -19,7 +19,11 @@ beacon_of_liberty = {
 	is_potential = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
-		
+		NOR = {
+			has_authority = auth_corporate 
+			has_ethic = ethic_gestalt_consciousness
+		} 
+
 		has_authority = auth_democratic
 		OR = {
 			has_ethic = ethic_egalitarian
@@ -29,7 +33,7 @@ beacon_of_liberty = {
 			has_ethic = ethic_xenophobe
 			has_ethic = ethic_fanatic_xenophobe
 		}
-		
+
 		count_owned_pop = {
 			count >= 1
 			limit = {

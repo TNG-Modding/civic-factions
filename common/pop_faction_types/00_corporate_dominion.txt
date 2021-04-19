@@ -19,6 +19,10 @@ corporate_dominion = {
 	is_potential = {
 		#years_passed > 11
 		#has_encountered_other_species = yes
+		NOR = {
+			has_authority = auth_corporate 
+			has_ethic = ethic_gestalt_consciousness
+		} 
 		
 		NOT = { 
 			host_has_dlc = "Megacorp" 
