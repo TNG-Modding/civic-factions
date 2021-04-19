@@ -4,7 +4,7 @@
 
 feudal_realm = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_xenophobe
+	guiding_ethic = ethic_xenophile
 
 	unique = yes
 	support_multiplier = 1
@@ -25,7 +25,7 @@ feudal_realm = {
 		count_owned_pop = {
 			count >= 1
 			limit = {
-				has_ethic = ethic_xenophobe
+				has_ethic = ethic_xenophile
 			}
 		}
 	}
@@ -52,7 +52,7 @@ feudal_realm = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_xenophobe
+			has_ethic = ethic_xenophile
 		}
 	}
 

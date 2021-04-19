@@ -4,7 +4,7 @@
 
 environmentalist = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_pacifist
+	guiding_ethic = ethic_spiritualist
 
 	unique = yes
 	support_multiplier = 1
@@ -25,7 +25,7 @@ environmentalist = {
 		count_owned_pop = {
 			count >= 1
 			limit = {
-				has_ethic = ethic_pacifist
+				has_ethic = ethic_spiritualist
 			}
 		}
 	}
@@ -52,7 +52,7 @@ environmentalist = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_pacifist
+			has_ethic = ethic_spiritualist
 		}
 	}
 

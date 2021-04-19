@@ -4,7 +4,7 @@
 
 shared_burden = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_authoritarian
+	guiding_ethic = ethic_egalitarian
 
 	unique = yes
 	support_multiplier = 1
@@ -25,7 +25,7 @@ shared_burden = {
 		count_owned_pop = {
 			count >= 1
 			limit = {
-				has_ethic = ethic_pacifist
+				has_ethic = ethic_egalitarian
 			}
 		}
 	}
@@ -52,7 +52,7 @@ shared_burden = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_pacifist
+			has_ethic = ethic_egalitarian
 		}
 	}
 

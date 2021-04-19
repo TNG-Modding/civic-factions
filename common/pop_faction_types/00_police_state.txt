@@ -4,7 +4,7 @@
 
 police_state = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_authoritarian
+	guiding_ethic = ethic_xenophobe
 
 	unique = yes
 	support_multiplier = 1
@@ -25,7 +25,7 @@ police_state = {
 		count_owned_pop = {
 			count >= 1
 			limit = {
-				has_ethic = ethic_authoritarian
+				has_ethic = ethic_xenophobe
 			}
 		}
 	}
@@ -52,7 +52,7 @@ police_state = {
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
-			has_ethic = ethic_authoritarian
+			has_ethic = ethic_xenophobe
 		}
 	}
 
