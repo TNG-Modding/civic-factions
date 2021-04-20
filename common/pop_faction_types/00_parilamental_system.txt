@@ -26,10 +26,13 @@ parliamentary_system = {
 		
 		has_authority = auth_democratic
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_egalitarian
+		OR = {
+			has_civic = civic_parliamentary_system
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_egalitarian
+				}
 			}
 		}
 	}

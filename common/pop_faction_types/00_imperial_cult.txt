@@ -34,10 +34,13 @@ imperial_cult = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_spiritualist
+		OR = {
+			has_civic = civic_imperial_cult
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_spiritualist
+				}
 			}
 		}
 	}

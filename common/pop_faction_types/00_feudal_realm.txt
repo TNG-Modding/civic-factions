@@ -26,10 +26,13 @@ feudal_realm = {
 		
 		has_authority = auth_imperial
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_xenophile
+		OR = {
+			has_civic = civic_feudal_realm
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_xenophile
+				}
 			}
 		}
 	}

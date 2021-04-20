@@ -30,10 +30,13 @@ shadow_council = {
 			has_authority = auth_dictatorial
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_authoritarian
+		OR = {
+			has_civic = civic_shadow_council
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_authoritarian
+				}
 			}
 		}
 	}

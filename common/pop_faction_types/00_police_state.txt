@@ -28,10 +28,13 @@ police_state = {
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_xenophobe
+		OR = {
+			has_civic = civic_police_state
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_xenophobe
+				}
 			}
 		}
 	}

@@ -29,10 +29,13 @@ diplomatic_corps = {
 			has_civic = civic_inwards_perfection
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_xenophile
+		OR = {
+			has_civic = civic_diplomatic_corps
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_xenophile
+				}
 			}
 		}
 	}

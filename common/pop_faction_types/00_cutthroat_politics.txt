@@ -24,10 +24,13 @@ cutthroat_politics = {
 			has_ethic = ethic_gestalt_consciousness
 		} 		
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_egalitarian
+		OR = {
+			has_civic = civic_cutthroat_politics
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_egalitarian
+				}
 			}
 		}
 	}

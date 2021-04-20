@@ -37,10 +37,13 @@ inwards_perfection = {
 			has_origin = origin_hegemon
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_xenophobe
+		OR = {
+			has_civic = civic_inwards_perfection
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_xenophobe
+				}
 			}
 		}
 	}

@@ -30,10 +30,13 @@ slaver_guild = {
 			has_ethic = ethic_fanatic_authoritarian
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_authoritarian
+		OR = {
+			has_civic = civic_slaver_guilds
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_authoritarian
+				}
 			}
 		}
 	}

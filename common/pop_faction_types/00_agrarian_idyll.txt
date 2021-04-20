@@ -35,10 +35,13 @@ agrarian_idyll = {
 			has_origin = origin_remnants
 		}	
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_pacifist
+		OR = {
+			has_civic = civic_agrarian_idyll
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_pacifist
+				}
 			}
 		}
 	}

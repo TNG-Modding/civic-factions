@@ -37,10 +37,13 @@ citizen_service = {
 			has_ethic = ethic_fanatic_xenophile
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_militarist
+		OR = {
+			has_civic = civic_citizen_service
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_militarist
+				}
 			}
 		}
 	}

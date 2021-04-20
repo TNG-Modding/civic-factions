@@ -44,10 +44,13 @@ barbaric_despoilers = {
 		
 		
 
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_xenophobe
+		OR = {
+			has_civic = civic_barbaric_despoilers
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_xenophobe
+				}
 			}
 		}
 	}

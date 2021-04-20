@@ -41,10 +41,13 @@ exalted_priesthood = {
 			has_civic = civic_technocracy
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_spiritualist
+		OR = {
+			has_civic = civic_exalted_priesthood
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_spiritualist
+				}
 			}
 		}
 	}

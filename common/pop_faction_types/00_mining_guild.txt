@@ -24,10 +24,13 @@ mining_guild = {
 			has_ethic = ethic_gestalt_consciousness
 		} 
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_authoritarian
+		OR = {
+			has_civic = civic_mining_guilds
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_authoritarian
+				}
 			}
 		}
 	}

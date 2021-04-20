@@ -32,11 +32,13 @@ technocracy = {
 			has_civic = civic_aristocratic_elite
 		}
 		
-		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_materialist
+		OR = {
+			has_civic = civic_technocracy
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_materialist
+				}
 			}
 		}
 	}

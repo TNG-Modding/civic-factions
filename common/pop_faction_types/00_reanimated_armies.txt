@@ -32,10 +32,13 @@ reanimated_armies = {
 		
 		host_has_dlc = "Necroids Species Pack"
 
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_materialist
+		OR = {
+			has_civic = civic_reanimated_armies
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_materialist
+				}
 			}
 		}
 	}

@@ -30,10 +30,13 @@ corvee_system = {
 			has_civic = civic_free_haven
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_authoritarian
+		OR = {
+			has_civic = civic_corvee_system
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_authoritarian
+				}
 			}
 		}
 	}

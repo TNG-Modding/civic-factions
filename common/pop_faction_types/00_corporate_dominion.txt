@@ -35,10 +35,13 @@ corporate_dominion = {
 			has_ethic = ethic_fanatic_xenophobe
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_xenophile
+		OR = {
+			has_civic = civic_corporate_dominion
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_xenophile
+				}
 			}
 		}
 	}

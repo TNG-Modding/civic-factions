@@ -30,10 +30,13 @@ merchant_guilds = {
 			has_civic = civic_technocracy
 		}
 		
-		count_owned_pop = {
-			count >= 1
-			limit = {
-				has_ethic = ethic_pacifist
+		OR = {
+			has_civic = civic_merchant_guilds
+			count_owned_pop = {
+				count >= 1
+				limit = {
+					has_ethic = ethic_pacifist
+				}
 			}
 		}
 	}
