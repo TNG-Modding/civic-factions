@@ -87,6 +87,14 @@ citizen_service = {
 		}
 
 		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				has_civic = civic_citizen_service
+			}
+		}
+
+		modifier = {
 			factor = 0.75
 			exists = from
 			from = {
@@ -103,9 +111,32 @@ citizen_service = {
 	leader = {
 		base = 100
 
+        modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				has_civic = civic_citizen_service
+			}
+		}
+
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
+		}
+	}
+
+	demand = {
+		title = "FACTION_CIVIC_ADOPTED"
+		unfulfilled_title = "FACTION_CIVIC_NOT_ADOPTED"
+		desc = "FACTION_CIVIC_ADOPTION_DESC"
+
+		fulfilled_effect = 20
+		unfulfilled_effect = 0
+
+		trigger = {
+			owner = {
+				has_civic = civic_citizen_service
+			}
 		}
 	}
 

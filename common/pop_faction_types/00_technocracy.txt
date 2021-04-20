@@ -29,7 +29,7 @@ technocracy = {
 		NOR = {
 			has_civic = civic_merchant_guilds
 			has_civic = civic_exalted_priesthood
-			has_civic = civic_aristocratic_elite
+			has_civic = civic_technocracy
 		}
 		
 		OR = {
@@ -82,6 +82,14 @@ technocracy = {
 		}
 
 		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				has_civic = civic_technocracy
+			}
+		}
+
+		modifier = {
 			factor = 0.75
 			exists = from
 			from = {
@@ -98,9 +106,32 @@ technocracy = {
 	leader = {
 		base = 100
 
+        modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				has_civic = civic_technocracy
+			}
+		}
+
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
+		}
+	}
+
+	demand = {
+		title = "FACTION_CIVIC_ADOPTED"
+		unfulfilled_title = "FACTION_CIVIC_NOT_ADOPTED"
+		desc = "FACTION_CIVIC_ADOPTION_DESC"
+
+		fulfilled_effect = 20
+		unfulfilled_effect = 0
+
+		trigger = {
+			owner = {
+				has_civic = civic_technocracy
+			}
 		}
 	}
 
