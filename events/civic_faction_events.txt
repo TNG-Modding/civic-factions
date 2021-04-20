@@ -17,32 +17,26 @@ pop_faction_event = {
                 text = government_branches.1.desc.agrarian_idyll
                 is_pop_faction_type = agrarian_idyll
             }
-
             success_text = {
                 text = government_branches.1.desc.aristocratic_elite
                 is_pop_faction_type = aristocratic_elite
             }
-
             success_text = {
                 text = government_branches.1.desc.barbaric_despoilers
                 is_pop_faction_type = barbaric_despoilers
             }
-
             success_text = {
                 text = government_branches.1.desc.beacon_of_liberty
                 is_pop_faction_type = beacon_of_liberty
             }
-
             success_text = {
                 text = government_branches.1.desc.byzantine_bureaucracy
                 is_pop_faction_type = byzantine_bureaucracy
             }
-            
             success_text = {
                 text = government_branches.1.desc.citizen_service
                 is_pop_faction_type = citizen_service
             }
-
             success_text = {
                 text = government_branches.1.desc.corporate_dominion
                 is_pop_faction_type = corporate_dominion
@@ -168,6 +162,8 @@ pop_faction_event = {
                 is_pop_faction_type = warrior_culture
             }
 
+            text = newline            
+            text = government_branches.1.desc.finisher
         }
     }
     
