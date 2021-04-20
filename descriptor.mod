@@ -3,4 +3,5 @@ tags={
 	"Gameplay"
 }
 name="Civics have Factions"
-supported_version="2.8.1"
+supported_version="3.0.1"
+remote_file_id="2462684411"

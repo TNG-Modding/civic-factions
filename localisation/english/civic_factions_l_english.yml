@@ -1,9 +1,13 @@
 ﻿l_english:
 
  government_branches.1.name:0 "Government Branch Founded"
-government_branches.1.desc.start:0 "The §H[Root.GetName]§! led by §H[Root.Leader.GetTitle] [Root.Leader.GetName]§! has established themselves in the §H[Root.Owner.GetName]§!."
+ government_branches.1.desc.start:0 "The §H[Root.GetName]§! led by §H[Root.Leader.GetTitle] [Root.Leader.GetName]§! has established themselves in the §H[Root.Owner.GetName]§!."
  government_branches.1.desc.finisher:0 "As a distinct wing of our government, their interests hold a priviledged position in political discourse."
  government_branches.1.a:0 "Civic virtue is here." 
+
+ FACTION_CIVIC_ADOPTED:0 "Civic Adopted"
+ FACTION_CIVIC_NOT_ADOPTED:0 "Civic Not Adopted"
+ FACTION_CIVIC_ADOPTION_DESC:0 "Adopting this factions civic would make its consituents very happy."
 
  government_branches.1.desc.agrarian_idyll:0 "In our society, we have largely avoided the tempatation of urbanization. Wealth can often be measured by gigacalorie per month of your farming estates, and the dimensions and fertility of the soil."
  pft_agrarian_idyll:0 "Agrarian Idyll Faction"
