@@ -1,9 +1,8 @@
-
 ##############################
-# slaver_guild Faction
+# mining_guilds Faction
 ##############################
 
-slaver_guild = {
+mining_guilds = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_authoritarian
 
@@ -26,12 +25,7 @@ slaver_guild = {
 		} 
 		
 		OR = {
-			has_ethic = ethic_authoritarian
-			has_ethic = ethic_fanatic_authoritarian
-		}
-		
-		OR = {
-			has_civic = civic_slaver_guilds
+			has_civic = civic_mining_guilds
 			count_owned_pop = {
 				count >= 1
 				limit = {
@@ -83,7 +77,7 @@ slaver_guild = {
 			factor = 1.25
 			exists = from
 			from = {
-				has_civic = civic_slaver_guild
+				has_civic = civic_mining_guild
 			}
 		}
 
@@ -108,7 +102,7 @@ slaver_guild = {
 			factor = 1.25
 			exists = from
 			from = {
-				has_civic = civic_slaver_guild
+				has_civic = civic_mining_guild
 			}
 		}
 
@@ -128,7 +122,7 @@ slaver_guild = {
 
 		trigger = {
 			owner = {
-				has_civic = civic_slaver_guild
+				has_civic = civic_mining_guild
 			}
 		}
 	}

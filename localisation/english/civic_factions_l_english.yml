@@ -101,9 +101,9 @@
  pft_meritocracy:0 "Meritocracy Faction"
  pft_meritocracy_desc:0 "The meritocracy faction represents the cadre of self-made professionals who owe their success to the government exams and accreditations that enable their high attainment."
 
- government_branches.1.desc.mining_guild:0 "In our society, wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officials have economic ties to the guild, and it is only natural that their interests be officially represented in our government."
- pft_mining_guild:0 "Mining Guild Faction"
- pft_mining_guild_desc:0 "The mining guild faction represents the many mining and extraction organizations across our empire."
+ government_branches.1.desc.mining_guilds:0 "In our society, wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officials have economic ties to the guild, and it is only natural that their interests be officially represented in our government."
+ pft_mining_guilds:0 "Mining Guilds Faction"
+ pft_mining_guilds_desc:0 "The mining guilds faction represents the many mining and extraction organizations across our empire."
  
  government_branches.1.desc.memorialist:0 "In our society, the study of death, chaos, and disorder has always been of particular interest. All paperwork processed by our government has clear instructions on handling the entropy it introduces."
  pft_memorialist:0 "Memorialist Faction"
@@ -141,9 +141,9 @@
  pft_shared_burden:0 "Shared Burden Faction"
  pft_shared_burden_desc:0 "The shared burden faction represents all free peoples, with their various needs and abilities."
 
- government_branches.1.desc.slaver_guild:0 "In our society, rights might better be understood as a series of obligations. Even our highest government officials have long term obligations spelled out in contracts kept safe within the confines of the guild headquarters."
- pft_slaver_guild:0 "Slaver Guild Faction"
- pft_slaver_guild_desc:0 "The slaver guild faction represents large holders of slaves across our empire. Concentric rings of slaveholders hold other slaveholders in various forms of bondage." 
+ government_branches.1.desc.slaver_guilds:0 "In our society, rights might better be understood as a series of obligations. Even our highest government officials have long term obligations spelled out in contracts kept safe within the confines of the guild headquarters."
+ pft_slaver_guilds:0 "Slaver Guilds Faction"
+ pft_slaver_guilds_desc:0 "The slaver guilds faction represents large holders of slaves across our empire. Concentric rings of slaveholders hold other slaveholders in various forms of bondage." 
 
  government_branches.1.desc.technocracy:0 "In our society, maths and sciences have taken on critical roles in all forms of governance."
  pft_technocracy:0 "Technocracy Faction"
