@@ -478,7 +478,7 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "mining_guild"
+			is_pop_faction_type = "mining_guilds"
 		}
 	}
 	format = "<mining_guild_names>"
@@ -622,7 +622,7 @@ pop_faction_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_pop_faction_type = "slaver_guild"
+			is_pop_faction_type = "slaver_guilds"
 		}
 	}
 	format = "<slaver_guild_names>"
