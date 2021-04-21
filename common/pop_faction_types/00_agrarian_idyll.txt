@@ -122,6 +122,76 @@ agrarian_idyll = {
 			is_event_leader = yes
 		}
 	}
+	
+	actions = {
+		embrace_civic = {
+			title = "EMBRACE_CIVIC"
+			description = "EMBRACE_CIVIC_DESC"
+
+			cost = {
+				energy = 1000
+			}
+
+			potential = {
+				exists = owner
+				owner = {
+					OR = {
+						is_subject = no
+						NOT = { is_subject_type = dominion }
+					}
+					NOT = {
+						has_civic = civic_agrarian_idyll
+					}
+				}
+			}
+
+			valid = {
+				custom_tooltip = {
+					fail_text = EMBRACE_CIVIC_COOLDOWN
+					parameter:empire = {
+						NOT = { has_modifier = embraced_civic_timer }
+					}
+				}
+				support > 0.20
+			}
+
+			effect = {
+				country_event = { id = civicfactions.999 }
+				add_modifier = { modifier = embraced_civic_timer days = 3600 }
+				parameter:empire = {
+					hidden_effect = {
+						add_modifier = { modifier = embraced_civic_timer days = 3600 }
+						every_pop_faction = {
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+				hidden_effect = {
+					save_event_target_as = TargetFaction
+					parameter:empire = {
+						every_relation = {
+							limit = {
+								is_ai = no
+								is_country_type = default
+								has_communications = prev
+								has_intel_level = {
+									who = prev
+									category = government
+									level >= 1
+								}
+							}
+							country_event = { id = factions.2000 }
+						}
+					}
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+	}
 
 	demand = {
 		title = "FACTION_CIVIC_ADOPTED"
