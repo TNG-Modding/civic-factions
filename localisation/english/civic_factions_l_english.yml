@@ -2,22 +2,22 @@
 
  government_branches.1.name:0 "Government Branch Founded"
  government_branches.1.desc.start:0 "The §H[Root.GetName]§! led by §H[Root.Leader.GetTitle] [Root.Leader.GetName]§! has established themselves in the §H[Root.Owner.GetName]§!."
- government_branches.1.desc.finisher:0 "As a distinct wing of our government, their interests hold a priviledged position in political discourse."
+ government_branches.1.desc.finisher:0 "As a distinct wing of our government, their interests hold a privileged  position in political discourse."
  government_branches.1.a:0 "Civic virtue is here." 
 
  FACTION_CIVIC_ADOPTED:0 "Civic Adopted"
  FACTION_CIVIC_NOT_ADOPTED:0 "Civic Not Adopted"
- FACTION_CIVIC_ADOPTION_DESC:0 "Adopting this factions civic would make its consituents very happy."
+ FACTION_CIVIC_ADOPTION_DESC:0 "Adopting this faction's civic would make its constituents very happy."
 
- government_branches.1.desc.agrarian_idyll:0 "In our society, we have largely avoided the tempatation of urbanization. Wealth can often be measured by gigacalorie per month of your farming estates, and the dimensions and fertility of the soil."
+ government_branches.1.desc.agrarian_idyll:0 "In our society, we have largely avoided the temptation of urbanization. Wealth can often be measured by gigacalorie per month of your farming estates, and the dimensions and fertility of the soil."
  pft_agrarian_idyll:0 "Agrarian Idyll Faction"
  pft_agrarian_idyll_desc:0 "The agrarian idyll faction represents the many farming organizations throughout our empire."
 
- government_branches.1.desc.aristocratic_elite:0 "In our society, enterprise is highly connected to birthright. Distinct bureaus have formed around the various inheritance laws, and wealth can measured by how many inheritance contracts mention you by name."
+ government_branches.1.desc.aristocratic_elite:0 "In our society, enterprise is highly connected to birthright. Distinct bureaus have formed around the various inheritance laws, and wealth can be measured by how many inheritance contracts mention you by name."
  pft_aristocratic_elite:0 "Aristocratic Elite Faction"
  pft_aristocratic_elite_desc:0 "The aristocratic elite faction represents the networks of hereditary landholders in our empire."
 
- government_branches.1.desc.barbaric_despoilers:0 "In our society, to take is to earn. We have long since codified the rules of loot distribution. Wealth be measured one's share of the loot, and frequency and scale of the raiders ventured."
+ government_branches.1.desc.barbaric_despoilers:0 "In our society, to take is to earn. We have long since codified the rules of loot distribution. Wealth can be measured as one's share of the loot, and frequency and scale of the raiders ventured."
  pft_barbaric_despoilers:0 "Barbaric Despoilers Faction"
  pft_barbaric_despoilers_desc:0 "The barbaric despoilers faction represents the many raider clans that are responsible for the regular credit influxes to our treasury."
 
@@ -33,7 +33,7 @@
  pft_citizen_service:0 "Citizen Service Faction"
  pft_citizen_service_desc:0 "The citizen service faction represents the body of citizens who owe their political power to their terms of service."
 
- government_branches.1.desc.corporate_dominion:0 "In our society, corporations have come to dominate many previously goverment servered functions."
+ government_branches.1.desc.corporate_dominion:0 "In our society, corporations have come to dominate many previously government served functions."
  pft_corporate_dominion:0 "Corporate Dominion Faction"
  pft_corporate_dominion_desc:0 "The corporate dominion faction represents the interests of the many corporations that have come to dominate society."
 
@@ -41,19 +41,19 @@
  pft_corvee_system:0 "Corvee System Faction"
  pft_corvee_system_desc:0 "The corvee system faction is network of officials dedicated to maximizing the effective utilization of the labor pool. Advancement and favor go to those who can squeeze the most out of their assigned pools while minimizing travel requirements."
 
- government_branches.1.desc.cutthroat_politics:0 "In our society, political influence is won through cunning, manueavering, and a less than moral outlook on the purpose of government."
+ government_branches.1.desc.cutthroat_politics:0 "In our society, political influence is won through cunning, maneuvering, and a less than moral outlook on the purpose of government."
  pft_cutthroat_politics:0 "Cutthroat Politics Faction"
  pft_cutthroat_politics_desc:0 "The cutthroat politics faction represents the body of officials who owe their continued political influence to misused and outdated government processes."
 
- government_branches.1.desc.death_cult:0 "In our society, death is not something feared but something cherished. Government archives are littered with accounts of death, and the fruits connnected with the passing."
+ government_branches.1.desc.death_cult:0 "In our society, death is not something feared but something cherished. Government archives are littered with accounts of death, and the fruits connected with the passing."
  pft_death_cult:0 "Death Cult Faction"
  pft_death_cult_desc:0 "The death cult faction represents the many priest-bureaucrats that chronicle and manage the route to the land of the dead."
 
  government_branches.1.desc.diplomatic_corps:0 "In our society, the office of ambassador holds the same weight as appendage healer, galactic law prosecutor, and extra-planetary gas extractor."
  pft_diplomatic_corps:0 "Diplomatic Corps Faction"
- pft_diplomatic_corps_desc:0 "The diplomatic corps faction represents the our many diplomats and their logistics teams and foreign constituents that make up our foreign policy staff."
+ pft_diplomatic_corps_desc:0 "The diplomatic corps faction represents our many diplomats and their logistics teams and foreign constituents that make up our foreign policy staff."
 
- government_branches.1.desc.distinguished_admiralty:0 "In our society, one of the surest routes to the top is through service in the Admiralty. Whether in the merchant-marine, gravity-well guard, or in the fleet itself, the many appendages of the Admiralty dip into many of our empires needs."
+ government_branches.1.desc.distinguished_admiralty:0 "In our society, one of the surest routes to the top is through service in the Admiralty. Whether in the merchant-marine, gravity-well guard, or in the fleet itself, the many appendages of the Admiralty dip into many of our empire's needs."
  pft_distinguished_admiralty:0 "Distinguished Admiralty Faction"
  pft_distinguished_admiralty_desc:0 "The distinguished admiralty faction represents the many naval officers whose business make up the very essence of a spacefaring empire."
 
@@ -61,11 +61,11 @@
  pft_efficient_bureaucracy:0 "Efficient Bureaucracy Faction"
  pft_efficient_bureaucracy_desc:0 "The efficient bureaucracy faction represents the many bureaucrats that make the government run smoothly."
 
- government_branches.1.desc.environmentalist:0 "In our society, the preservation of our resources, ecoysystems, and picturesque vistas is of paramount importance of the state. Social advancement can be attained in the management of government owned lots of nature, and in processing peta units of waste."
+ government_branches.1.desc.environmentalist:0 "In our society, the preservation of our resources, ecosystems, and picturesque vistas is of paramount importance to the state. Social advancement can be attained in the management of government owned lots of nature, and in processing peta units of waste."
  pft_environmentalist:0 "Environmentalist Faction"
  pft_environmentalist_desc:0 "The environmentalist faction represents those officials whose careers depend on the redirection of our governments waste away from our pristine vistas."
 
- government_branches.1.desc.exalted_priesthood:0 "In our society, the primacy of the deacon on matters of faith and right governance is unquestioned. Our citizens know that they and there business partners are situated in the same community of priests, so good will can be assumed."
+ government_branches.1.desc.exalted_priesthood:0 "In our society, the primacy of the deacon on matters of faith and right governance is unquestioned. Our citizens know that they and their business partners are situated in the same community of priests, so good will can be assumed."
  pft_exalted_priesthood:0 "Exalted Priesthood Faction"
  pft_exalted_priesthood_desc:0 "The exalted priesthood faction represents the network of priests who manage government affairs for our communities."
 
@@ -74,8 +74,8 @@
  pft_fanatic_purifiers_desc:0 "The fanatic purifiers faction represents the many bureaucrats who owe their advancement to meeting the rigorous purity standards set by the state."
 
  government_branches.1.desc.feudal_realm:0 "In our society, hospitality shown towards foreign dignitaries has always been a virtue. Delegating defense and governance through a system of petty rulers has always been our preference."
- pft_feudal_realm:0 "Fuedal Realm Faction"
- pft_feudal_realm_desc:0 "The fuedal realm faction represents the network of petty rulers who manage the defense and governance of our outer territories."
+ pft_feudal_realm:0 "Feudal Realm Faction"
+ pft_feudal_realm_desc:0 "The feudal realm faction represents the network of petty rulers who manage the defense and governance of our outer territories."
 
  government_branches.1.desc.free_haven:0 "In our society, the care of the poor and downtrodden has always been a priority. There are a million different categories of need based provisions established by our government, and the enterprising individual of any stripe can easily take advantage of these to build a productive life for themselves."
  pft_free_haven:0 "Free Haven Faction"
@@ -85,7 +85,7 @@
  pft_functional_architecture:0 "Functional Architecture Faction"
  pft_functional_architecture_desc:0 "The functional architecture faction represents the many galactic architects whose many projects span our entire empire."
 
- government_branches.1.desc.idealistic_foundation:0 "In our society, one can rest easy knowing their rights, privledges, and responsibilities have spelled out in our empires founding document."
+ government_branches.1.desc.idealistic_foundation:0 "In our society, one can rest easy knowing their rights, privileges, and responsibilities have spelled out in our empires founding document."
  pft_idealistic_foundation:0 "Idealistic Foundation Faction"
  pft_idealistic_foundation_desc:0 "The idealistic foundation faction represents the officials who draw their political power from citings our governments founding documents."
 
@@ -95,13 +95,13 @@
 
  government_branches.1.desc.imperial_cult:0 "In our society, truth and profit and purpose flow from the will of our leader both practically and technically. Through surrendering to the emperor's will, profane acts can be made divine and societal advancement assured."
  pft_imperial_cult:0 "Imperial Cult Faction"
- pft_imperial_cult_desc:0 "The imperial cult faction represents the entrenched priesthood emanating from the office of the emperor. Priest and politician merge as the all government acts must link to official imperial declarations of divine intent."
+ pft_imperial_cult_desc:0 "The imperial cult faction represents the entrenched priesthood emanating from the office of the emperor. Priest and politician merge as all government acts must link to official imperial declarations of divine intent."
  
  government_branches.1.desc.meritocracy:0 "In our society, societal advancement is directly tied to the value our service provided to society. Whether by taking part in the galactic exam, or by attending a public education institution, the average citizen has many routes to the top."
  pft_meritocracy:0 "Meritocracy Faction"
  pft_meritocracy_desc:0 "The meritocracy faction represents the cadre of self-made professionals who owe their success to the government exams and accreditations that enable their high attainment."
 
- government_branches.1.desc.mining_guild:0 "In our society, wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officals have economic ties to the guild, and it is only natural that their interests be officially represented in our government."
+ government_branches.1.desc.mining_guild:0 "In our society, wealth in our empire is measured in mining facilities, extraction equipment patents, and labor headcounts. Most government officials have economic ties to the guild, and it is only natural that their interests be officially represented in our government."
  pft_mining_guild:0 "Mining Guild Faction"
  pft_mining_guild_desc:0 "The mining guild faction represents the many mining and extraction organizations across our empire."
  
@@ -109,19 +109,19 @@
  pft_memorialist:0 "Memorialist Faction"
  pft_memorialist_desc:0 "The memorialist faction represents the cadre of officials who owe their continued existence to government intervention parties who interceded in their previously chaotic, undirected life that was on the way to ending itself prematurely."
 
- government_branches.1.desc.merchant_guilds:0 "In our society, the wealth of the merchant class has always given the cache. Many an individual has bought their political power through taking part in merchant expeditions out-system."
+ government_branches.1.desc.merchant_guilds:0 "In our society, the wealth of the merchant class has always given the cache. Many individuals have bought their political power through taking part in merchant expeditions out-system."
  pft_merchant_guilds:0 "Merchant Guilds Faction"
- pft_merchant_guilds_desc:0 "The merchant guilds faction represents the merchants whose money and connections greases the wheels of government."
+ pft_merchant_guilds_desc:0 "The merchant guilds faction represents the merchants whose money and connections grease the wheels of government."
 
  government_branches.1.desc.nationalistic_zeal:0 "In our society, government holo-shows and slogans are ever present. One can find good business in incorporating these memorized catch-phrases into products and services."
  pft_nationalistic_zeal:0 "Nationalistic Zeal Faction"
  pft_nationalistic_zeal_desc:0 "The nationalistic zeal faction represents the art and outreach officials of the government who dictate government policy as much as they dictate public opinion."
 
- government_branches.1.desc.parliamentary_system:0 "In our society, the citizenry exert executive powers through their representatives in our parliament. It is not uncommon for a politicians to base their platform on clever witticisms and insults."
+ government_branches.1.desc.parliamentary_system:0 "In our society, the citizenry exert executive powers through their representatives in our parliament. It is not uncommon for politicians to base their platform on clever witticisms and insults."
  pft_parliamentary_system:0 "Parliamentary Faction"
- pft_parliamentary_system_desc:0 "The parliamentary faction represents the citizenry through a complex set of precedures."
+ pft_parliamentary_system_desc:0 "The parliamentary faction represents the citizenry through a complex set of procedures."
 
- government_branches.1.desc.philosopher_king:0 "In our society, philosophy and other liberal arts hold the highest esteem. Often ones whole career can be made simply by quoting what other, better philosophers have said."
+ government_branches.1.desc.philosopher_king:0 "In our society, philosophy and other liberal arts hold the highest esteem. Often one's whole academic and political career can be made simply by quoting what other, better philosophers have said."
  pft_philosopher_king:0 "Philosopher King Faction"
  pft_philosopher_king_desc:0 "The philosopher king faction represents the collegiate interests of the liberal arts education system."
 
@@ -129,7 +129,7 @@
  pft_police_state:0 "Police State Faction"
  pft_police_state_desc:0 "The police state faction represents the powerful lawmakers and law executors that control the everyday functioning of the empire."
 
- government_branches.1.desc.reanimated_armies:0 "In our society, many practice ulterior forms of life. Though not as glamorous as their more liverly counterparts, these denizens of the afterlife and their fleet of medical support units form a large cadre of our society. Death need not be the end."
+ government_branches.1.desc.reanimated_armies:0 "In our society, many practice ulterior forms of life. Though not as glamorous as their more lively counterparts, these denizens of the afterlife and their fleet of medical support units form a large cadre of our society. Death need not be the end."
  pft_reanimated_armies:0 "Reanimated Armies Faction"
  pft_reanimated_armies_desc:0 "The reanimated armies faction represents the many insurance agencies using necromancy to collect on would-be-dead-debtors."
 
@@ -141,11 +141,11 @@
  pft_shared_burden:0 "Shared Burden Faction"
  pft_shared_burden_desc:0 "The shared burden faction represents all free peoples, with their various needs and abilities."
 
- government_branches.1.desc.slaver_guild:0 "In our society, rights might better be understood as a series of obligations. Even our highest government officals have long term obligations spelled out in contracts kept safe within the confines of the guild headquarters."
+ government_branches.1.desc.slaver_guild:0 "In our society, rights might better be understood as a series of obligations. Even our highest government officials have long term obligations spelled out in contracts kept safe within the confines of the guild headquarters."
  pft_slaver_guild:0 "Slaver Guild Faction"
- pft_slaver_guild_desc:0 "The slaver guild faction represents large holder of slaves across our empire. Concentric rings of slaveholders hold other slaveholders in various forms of bondage." 
+ pft_slaver_guild_desc:0 "The slaver guild faction represents large holders of slaves across our empire. Concentric rings of slaveholders hold other slaveholders in various forms of bondage." 
 
- government_branches.1.desc.technocracy:0 "In our society, maths and sciences have taken on critical role in all forms of governance."
+ government_branches.1.desc.technocracy:0 "In our society, maths and sciences have taken on critical roles in all forms of governance."
  pft_technocracy:0 "Technocracy Faction"
  pft_technocracy_desc:0 "The technocracy faction represents the entrenched literati."
 
