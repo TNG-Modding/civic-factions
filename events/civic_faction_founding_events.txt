@@ -114,8 +114,8 @@ pop_faction_event = {
                 is_pop_faction_type = meritocracy
             }
             success_text = {
-                text = government_branches.1.desc.mining_guild
-                is_pop_faction_type = mining_guild
+                text = government_branches.1.desc.mining_guilds
+                is_pop_faction_type = mining_guilds
             }
             success_text = {
                 text = government_branches.1.desc.nationalistic_zeal
@@ -150,8 +150,8 @@ pop_faction_event = {
                 is_pop_faction_type = shared_burden
             }
             success_text = {
-                text = government_branches.1.desc.slaver_guild
-                is_pop_faction_type = slaver_guild
+                text = government_branches.1.desc.slaver_guilds
+                is_pop_faction_type = slaver_guilds
             }
             success_text = {
                 text = government_branches.1.desc.technocracy
