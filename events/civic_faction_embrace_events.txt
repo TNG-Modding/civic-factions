@@ -1,0 +1,399 @@
+########################
+# Civic faction events #
+########################
+
+namespace = faction_embrace
+pop_faction_event = {
+    id = faction_embrace.1
+    title = faction_embrace.1.name
+    desc = {
+        trigger = {
+            text = faction_embrace.1.desc.start
+
+            text = newline
+
+            # Civic faction middle desc
+            success_text = {
+                text = faction_embrace.1.desc.agrarian_idyll
+                is_pop_faction_type = agrarian_idyll
+            }
+            success_text = {
+                text = faction_embrace.1.desc.aristocratic_elite
+                is_pop_faction_type = aristocratic_elite
+            }
+            success_text = {
+                text = faction_embrace.1.desc.barbaric_despoilers
+                is_pop_faction_type = barbaric_despoilers
+            }
+            success_text = {
+                text = faction_embrace.1.desc.beacon_of_liberty
+                is_pop_faction_type = beacon_of_liberty
+            }
+            success_text = {
+                text = faction_embrace.1.desc.byzantine_bureaucracy
+                is_pop_faction_type = byzantine_bureaucracy
+            }
+            success_text = {
+                text = faction_embrace.1.desc.citizen_service
+                is_pop_faction_type = citizen_service
+            }
+            success_text = {
+                text = faction_embrace.1.desc.corporate_dominion
+                is_pop_faction_type = corporate_dominion
+            }
+            success_text = {
+                text = faction_embrace.1.desc.corvee_system
+                is_pop_faction_type = corvee_system
+            }
+            success_text = {
+                text = faction_embrace.1.desc.cutthroat_politics
+                is_pop_faction_type = cutthroat_politics
+            }
+            success_text = {
+                text = faction_embrace.1.desc.death_cult
+                is_pop_faction_type = death_cult
+            }
+            success_text = {
+                text = faction_embrace.1.desc.diplomatic_corps
+                is_pop_faction_type = diplomatic_corps
+            }
+            success_text = {
+                text = faction_embrace.1.desc.distinguished_admiralty
+                is_pop_faction_type = distinguished_admiralty
+            }
+            success_text = {
+                text = faction_embrace.1.desc.efficient_bureaucracy
+                is_pop_faction_type = efficient_bureaucracy
+            }
+            success_text = {
+                text = faction_embrace.1.desc.environmentalist
+                is_pop_faction_type = environmentalist
+            }
+            success_text = {
+                text = faction_embrace.1.desc.exalted_priesthood
+                is_pop_faction_type = exalted_priesthood
+            }
+            success_text = {
+                text = faction_embrace.1.desc.fanatic_purifiers
+                is_pop_faction_type = fanatic_purifiers
+            }
+            success_text = {
+                text = faction_embrace.1.desc.feudal_realm
+                is_pop_faction_type = feudal_realm
+            }
+            success_text = {
+                text = faction_embrace.1.desc.free_haven
+                is_pop_faction_type = free_haven
+            }
+            success_text = {
+                text = faction_embrace.1.desc.functional_architecture
+                is_pop_faction_type = functional_architecture
+            }
+            success_text = {
+                text = faction_embrace.1.desc.idealistic_foundation
+                is_pop_faction_type = idealistic_foundation
+            }
+            success_text = {
+                text = faction_embrace.1.desc.imperial_cult
+                is_pop_faction_type = imperial_cult
+            }
+            success_text = {
+                text = faction_embrace.1.desc.inwards_perfection
+                is_pop_faction_type = inwards_perfection
+            }
+            success_text = {
+                text = faction_embrace.1.desc.memorialist
+                is_pop_faction_type = memorialist
+            }
+            success_text = {
+                text = faction_embrace.1.desc.merchant_guilds
+                is_pop_faction_type = merchant_guilds
+            }
+            success_text = {
+                text = faction_embrace.1.desc.meritocracy
+                is_pop_faction_type = meritocracy
+            }
+            success_text = {
+                text = faction_embrace.1.desc.mining_guilds
+                is_pop_faction_type = mining_guilds
+            }
+            success_text = {
+                text = faction_embrace.1.desc.nationalistic_zeal
+                is_pop_faction_type = nationalistic_zeal
+            }
+            success_text = {
+                text = faction_embrace.1.desc.parliamentary_system
+                is_pop_faction_type = parliamentary_system
+            }
+            success_text = {
+                text = faction_embrace.1.desc.philosopher_king
+                is_pop_faction_type = philosopher_king
+            }
+            success_text = {
+                text = faction_embrace.1.desc.police_state
+                is_pop_faction_type = police_state
+            }
+            success_text = {
+                text = faction_embrace.1.desc.police_state
+                is_pop_faction_type = police_state
+            }
+            success_text = {
+                text = faction_embrace.1.desc.reanimated_armies
+                is_pop_faction_type = reanimated_armies
+            }
+            success_text = {
+                text = faction_embrace.1.desc.shadow_council
+                is_pop_faction_type = shadow_council
+            }
+            success_text = {
+                text = faction_embrace.1.desc.shared_burden
+                is_pop_faction_type = shared_burden
+            }
+            success_text = {
+                text = faction_embrace.1.desc.slaver_guilds
+                is_pop_faction_type = slaver_guilds
+            }
+            success_text = {
+                text = faction_embrace.1.desc.technocracy
+                is_pop_faction_type = technocracy
+            }
+            success_text = {
+                text = faction_embrace.1.desc.warrior_culture
+                is_pop_faction_type = warrior_culture
+            }
+
+            text = newline            
+            text = faction_embrace.1.desc.finisher
+        }
+    }
+    
+    picture = GFX_evt_galactic_senate
+    show_sound = event_factions
+    is_triggered_only = yes
+
+    option = {
+        name = faction_embrace.1.cancel
+    }
+    option = {
+        name = faction_embrace.1.abandon_agrarian_idyll
+        trigger = {
+            owner = { has_civic = civic_agrarian_idyll }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_aristocratic_elite
+        trigger = {
+            owner = { has_civic = civic_aristocratic_elite }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_barbaric_despoilers
+        trigger = {
+            owner = { has_civic = civic_barbaric_despoilers }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_beacon_of_liberty
+        trigger = {
+            owner = { has_civic = civic_beacon_of_liberty }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_byzantine_bureaucracy
+        trigger = {
+            owner = { has_civic = civic_byzantine_bureaucracy }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_citizen_service
+        trigger = {
+            owner = { has_civic = civic_citizen_service }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_corporate_dominion
+        trigger = {
+            owner = { has_civic = civic_corporate_dominion }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_corvee_system
+        trigger = {
+            owner = { has_civic = civic_corvee_system }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_cutthroat_politics
+        trigger = {
+            owner = { has_civic = civic_cutthroat_politics }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_death_cult
+        trigger = {
+            owner = { has_civic = civic_death_cult }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_diplomatic_corps
+        trigger = {
+            owner = { has_civic = civic_diplomatic_corps }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_distinguished_admiralty
+        trigger = {
+            owner = { has_civic = civic_distinguished_admiralty }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_efficient_bureaucracy
+        trigger = {
+            owner = { has_civic = civic_efficient_bureaucracy }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_environmentalist
+        trigger = {
+            owner = { has_civic = civic_environmentalist }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_exalted_priesthood
+        trigger = {
+            owner = { has_civic = civic_exalted_priesthood }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_fanatic_purifiers
+        trigger = {
+            owner = { has_civic = civic_fanatic_purifiers }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_feudal_realm
+        trigger = {
+            owner = { has_civic = civic_feudal_realm }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_free_haven
+        trigger = {
+            owner = { has_civic = civic_free_haven }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_functional_architecture
+        trigger = {
+            owner = { has_civic = civic_functional_architecture }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_idealistic_foundation
+        trigger = {
+            owner = { has_civic = civic_idealistic_foundation }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_imperial_cult
+        trigger = {
+            owner = { has_civic = civic_imperial_cult }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_inwards_perfection
+        trigger = {
+            owner = { has_civic = civic_inwards_perfection }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_memorialist
+        trigger = {
+            owner = { has_civic = civic_memorialist }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_merchant_guilds
+        trigger = {
+            owner = { has_civic = civic_merchant_guilds }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_meritocracy
+        trigger = {
+            owner = { has_civic = civic_meritocracy }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_mining_guilds
+        trigger = {
+            owner = { has_civic = civic_mining_guilds }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_nationalistic_zeal
+        trigger = {
+            owner = { has_civic = civic_nationalistic_zeal }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_parliamentary_system
+        trigger = {
+            owner = { has_civic = civic_parliamentary_system }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_philosopher_king
+        trigger = {
+            owner = { has_civic = civic_philosopher_king }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_police_state
+        trigger = {
+            owner = { has_civic = civic_police_state }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_police_state
+        trigger = {
+            owner = { has_civic = civic_police_state }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_reanimated_armies
+        trigger = {
+            owner = { has_civic = civic_reanimated_armies }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_shadow_council
+        trigger = {
+            owner = { has_civic = civic_shadow_council }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_shared_burden
+        trigger = {
+            owner = { has_civic = civic_shared_burden }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_slaver_guilds
+        trigger = {
+            owner = { has_civic = civic_slaver_guilds }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_technocracy
+        trigger = {
+            owner = { has_civic = civic_technocracy }
+        }
+    }
+    option = {
+        name = faction_embrace.1.abandon_warrior_culture
+        trigger = {
+            owner = { has_civic = civic_warrior_culture }
+        }
+    }
+}
