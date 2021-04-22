@@ -81,7 +81,7 @@ philosopher_king = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_philosopher_king
 			}
 		}
@@ -106,7 +106,7 @@ philosopher_king = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_philosopher_king
 			}
 		}

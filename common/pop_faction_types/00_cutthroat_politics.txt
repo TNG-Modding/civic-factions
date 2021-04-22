@@ -76,7 +76,7 @@ cutthroat_politics = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_cutthroat_politics
 			}
 		}
@@ -101,7 +101,7 @@ cutthroat_politics = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_cutthroat_politics
 			}
 		}

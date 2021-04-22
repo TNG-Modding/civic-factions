@@ -84,7 +84,7 @@ reanimated_armies = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_reanimated_armies
 			}
 		}
@@ -109,7 +109,7 @@ reanimated_armies = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_reanimated_armies
 			}
 		}

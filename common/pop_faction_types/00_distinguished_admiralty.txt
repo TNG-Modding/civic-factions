@@ -81,7 +81,7 @@ distinguished_admiralty = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_distinguished_admiralty
 			}
 		}
@@ -106,7 +106,7 @@ distinguished_admiralty = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_distinguished_admiralty
 			}
 		}

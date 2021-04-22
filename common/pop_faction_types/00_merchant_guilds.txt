@@ -82,7 +82,7 @@ merchant_guilds = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_merchant_guilds
 			}
 		}
@@ -107,7 +107,7 @@ merchant_guilds = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_merchant_guilds
 			}
 		}

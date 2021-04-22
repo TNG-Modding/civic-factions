@@ -76,7 +76,7 @@ functional_architecture = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_aristocratic_elite
 			}
 		}
@@ -101,7 +101,7 @@ functional_architecture = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_aristocratic_elite
 			}
 		}

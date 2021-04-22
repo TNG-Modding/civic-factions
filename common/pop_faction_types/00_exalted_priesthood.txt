@@ -93,7 +93,7 @@ exalted_priesthood = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_exalted_priesthood
 			}
 		}
@@ -118,7 +118,7 @@ exalted_priesthood = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_exalted_priesthood
 			}
 		}

@@ -87,7 +87,7 @@ agrarian_idyll = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_agrarian_idyll
 			}
 		}
@@ -112,7 +112,7 @@ agrarian_idyll = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_agrarian_idyll
 			}
 		}

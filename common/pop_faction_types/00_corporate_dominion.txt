@@ -87,7 +87,7 @@ corporate_dominion = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_corporate_dominion
 			}
 		}
@@ -112,7 +112,7 @@ corporate_dominion = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_corporate_dominion
 			}
 		}

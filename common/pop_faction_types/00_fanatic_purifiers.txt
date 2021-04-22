@@ -89,7 +89,7 @@ fanatic_purifiers = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_fanatic_purifiers
 			}
 		}
@@ -114,7 +114,7 @@ fanatic_purifiers = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_fanatic_purifiers
 			}
 		}

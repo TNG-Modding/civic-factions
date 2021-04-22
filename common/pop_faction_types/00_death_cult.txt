@@ -88,7 +88,7 @@ death_cult = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_death_cult
 			}
 		}
@@ -113,7 +113,7 @@ death_cult = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_death_cult
 			}
 		}

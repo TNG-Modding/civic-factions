@@ -83,7 +83,7 @@ shared_burden = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_shared_burden
 			}
 		}
@@ -108,7 +108,7 @@ shared_burden = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_shared_burden
 			}
 		}

@@ -86,7 +86,7 @@ beacon_of_liberty = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_beacon_of_liberty
 			}
 		}
@@ -111,7 +111,7 @@ beacon_of_liberty = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_beacon_of_liberty
 			}
 		}

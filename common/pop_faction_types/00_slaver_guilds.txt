@@ -82,8 +82,8 @@ slaver_guilds = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
-				has_civic = civic_slaver_guild
+			owner = {
+				has_civic = civic_slaver_guilds
 			}
 		}
 
@@ -107,8 +107,8 @@ slaver_guilds = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
-				has_civic = civic_slaver_guild
+			owner = {
+				has_civic = civic_slaver_guilds
 			}
 		}
 
@@ -128,7 +128,7 @@ slaver_guilds = {
 
 		trigger = {
 			owner = {
-				has_civic = civic_slaver_guild
+				has_civic = civic_slaver_guilds
 			}
 		}
 	}

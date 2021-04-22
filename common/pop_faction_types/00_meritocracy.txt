@@ -81,7 +81,7 @@ meritocracy = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_meritocracy
 			}
 		}
@@ -106,7 +106,7 @@ meritocracy = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_meritocracy
 			}
 		}

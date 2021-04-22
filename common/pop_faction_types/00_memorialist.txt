@@ -80,7 +80,7 @@ memorialist = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_memorialist
 			}
 		}
@@ -105,7 +105,7 @@ memorialist = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_memorialist
 			}
 		}

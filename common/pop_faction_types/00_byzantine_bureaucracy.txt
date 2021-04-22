@@ -76,7 +76,7 @@ byzantine_bureaucracy = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_byzantine_bureaucracy
 			}
 		}
@@ -101,7 +101,7 @@ byzantine_bureaucracy = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_byzantine_bureaucracy
 			}
 		}

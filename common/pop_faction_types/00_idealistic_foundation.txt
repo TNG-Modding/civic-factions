@@ -81,7 +81,7 @@ idealistic_foundation = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_idealistic_foundation
 			}
 		}
@@ -106,7 +106,7 @@ idealistic_foundation = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_idealistic_foundation
 			}
 		}

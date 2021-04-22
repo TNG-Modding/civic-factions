@@ -82,7 +82,7 @@ shadow_council = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_shadow_council
 			}
 		}
@@ -107,7 +107,7 @@ shadow_council = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_shadow_council
 			}
 		}

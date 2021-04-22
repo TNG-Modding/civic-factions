@@ -90,7 +90,7 @@ aristocratic_elite = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_aristocratic_elite
 			}
 		}
@@ -115,7 +115,7 @@ aristocratic_elite = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_aristocratic_elite
 			}
 		}

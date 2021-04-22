@@ -82,7 +82,7 @@ corvee_system = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_corvee_system
 			}
 		}
@@ -107,7 +107,7 @@ corvee_system = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_corvee_system
 			}
 		}

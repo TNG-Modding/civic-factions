@@ -89,7 +89,7 @@ citizen_service = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_citizen_service
 			}
 		}
@@ -114,7 +114,7 @@ citizen_service = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_citizen_service
 			}
 		}

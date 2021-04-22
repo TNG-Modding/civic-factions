@@ -86,7 +86,7 @@ imperial_cult = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_imperial_cult
 			}
 		}
@@ -111,7 +111,7 @@ imperial_cult = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_imperial_cult
 			}
 		}

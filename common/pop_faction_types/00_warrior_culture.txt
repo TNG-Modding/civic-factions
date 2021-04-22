@@ -81,7 +81,7 @@ warrior_culture = {
 		modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_warrior_culture
 			}
 		}
@@ -106,7 +106,7 @@ warrior_culture = {
         modifier = {
 			factor = 1.25
 			exists = from
-			from = {
+			owner = {
 				has_civic = civic_warrior_culture
 			}
 		}
