@@ -1,0 +1,11 @@
+#########################
+# Civic point modifiers #
+#########################
+
+not_open_to_government = {
+	
+}
+
+open_to_government = {
+	
+}
