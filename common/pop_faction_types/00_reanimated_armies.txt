@@ -316,10 +316,6 @@ reanimated_armies = {
 		}
 	}
 
-	on_create = {
-		pop_faction_event = { id = factions.1 }
-	}
-
 	demand = {
 		title = "TECHNOLOGIST_SECRET_KNOWLEDGE"
 		unfulfilled_title = "TECHNOLOGIST_NO_SECRET_KNOWLEDGE"
