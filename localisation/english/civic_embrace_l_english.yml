@@ -1,15 +1,12 @@
 ﻿l_english:
 
  EMBRACE_CIVIC:0 "Embrace Civic"
- EMBRACE_CIVIC_DESC:0 "Embrace this civic into your government, if you do not have a civic point you will have to choose a civic to abandon."
+ EMBRACE_CIVIC_DESC:0 "Add this civic. If you do not have a civic point you will have to choose a civic to abandon."
  EMBRACE_CIVIC_COOLDOWN:0 "Embracing a civic is on cooldown."
 
- embraced_another_civic:0 "Embrace another civic"
+ embraced_another_civic:0 "Embraced another civic"
  embraced_civic_timer:0 "Embrace Civic Cooldown"
  embraced_civic:0 "Embrace Civic"
-
- open_to_government:0 "Open Civic Slots"
- not_open_to_government:0 "No Open Civic Slots"
 
  faction_embrace.2.name:0 "Adopt a Civic Faction"
  faction_embrace.2.desc.start:0 "The structure of our government has proven inadequate to meet the needs of our empire. We must meet these challenges by adopting a new way of governance."
@@ -53,6 +50,7 @@
 
  faction_embrace.2.desc.no_open_civic_slot:0 "In order to adopt this civic, we must abandon another. Which will we choose?"
 
+ # Faction embrace options
  faction_embrace.2.adoptWithoutAbandon:0 "We welcome them into our government."
  faction_embrace.2.cancel:0 "Nevermind."
 
@@ -92,3 +90,43 @@
  faction_embrace.2.abandon_slaver_guilds:0 "Abandon the slaver guilds faction."
  faction_embrace.2.abandon_technocracy:0 "Abandon the technocracy faction."
  faction_embrace.2.abandon_warrior_culture:0 "Abandon the warrior culture faction."
+ 
+ # Civic adoption notification
+ faction_embrace.3.title:0 "Shift in Civics in the [TargetFaction.Owner.GetName]"
+ faction_embrace.3.desc.start:0 "Following a long period of growing support for the §Y[TargetFaction.GetName]§!, the §Y[TargetFaction.Owner.GetName]§! has finally embraced the civic faction."
+ faction_embrace.3.desc.agrarian_idyll:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.aristocratic_elite:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.barbaric_despoilers:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.beacon_of_liberty:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.byzantine_bureaucracy:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.citizen_service:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.corporate_dominion:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.corvee_system:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.cutthroat_politics:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.death_cult:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.diplomatic_corps:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.distinguished_admiralty:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.efficient_bureaucracy:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.environmentalist:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.exalted_priesthood:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.fanatic_purifiers:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.feudal_realm:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.free_haven:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.functional_architecture:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.idealistic_foundation:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.imperial_cult:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.inwards_perfection:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.memorialist:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.merchant_guilds:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.meritocracy:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.mining_guilds:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.nationalistic_zeal:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.parliamentary_system:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.philosopher_king:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.police_state:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.reanimated_armies:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.shadow_council:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.shared_burden:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.slaver_guilds:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.technocracy:0 "As a result of elevating this faction into their government, they will reap new rewards."
+ faction_embrace.3.desc.warrior_culture:0 "As a result of elevating this faction into their government, they will reap new rewards."

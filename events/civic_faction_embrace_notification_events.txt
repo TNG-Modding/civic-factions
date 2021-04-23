@@ -1,0 +1,59 @@
+﻿namespace = faction_embrace
+
+country_event = {
+	id = faction_embrace.3
+	title = faction_embrace.3.title
+	location = event_target:TargetFaction.Owner.capital_scope
+	desc = {
+		trigger = {
+			text = faction_embrace.3.desc.start
+			text = newline
+
+			success_text = { text = faction_embrace.3.desc.agrarian_idyll event_target:TargetFaction = { is_pop_faction_type = agrarian_idyll } }
+			success_text = { text = faction_embrace.3.desc.aristocratic_elite event_target:TargetFaction = { is_pop_faction_type = aristocratic_elite } }
+			success_text = { text = faction_embrace.3.desc.barbaric_despoilers event_target:TargetFaction = { is_pop_faction_type = barbaric_despoilers } }
+			success_text = { text = faction_embrace.3.desc.beacon_of_liberty event_target:TargetFaction = { is_pop_faction_type = beacon_of_liberty } }
+			success_text = { text = faction_embrace.3.desc.byzantine_bureaucracy event_target:TargetFaction = { is_pop_faction_type = byzantine_bureaucracy } }
+			success_text = { text = faction_embrace.3.desc.citizen_service event_target:TargetFaction = { is_pop_faction_type = citizen_service } }
+			success_text = { text = faction_embrace.3.desc.corporate_dominion event_target:TargetFaction = { is_pop_faction_type = corporate_dominion } }
+			success_text = { text = faction_embrace.3.desc.corvee_system event_target:TargetFaction = { is_pop_faction_type = corvee_system } }
+			success_text = { text = faction_embrace.3.desc.cutthroat_politics event_target:TargetFaction = { is_pop_faction_type = cutthroat_politics } }
+			success_text = { text = faction_embrace.3.desc.death_cult event_target:TargetFaction = { is_pop_faction_type = death_cult } }
+			success_text = { text = faction_embrace.3.desc.diplomatic_corps event_target:TargetFaction = { is_pop_faction_type = diplomatic_corps } }
+			success_text = { text = faction_embrace.3.desc.distinguished_admiralty event_target:TargetFaction = { is_pop_faction_type = distinguished_admiralty } }
+			success_text = { text = faction_embrace.3.desc.efficient_bureaucracy event_target:TargetFaction = { is_pop_faction_type = efficient_bureaucracy } }
+			success_text = { text = faction_embrace.3.desc.environmentalist event_target:TargetFaction = { is_pop_faction_type = environmentalist } }
+			success_text = { text = faction_embrace.3.desc.exalted_priesthood event_target:TargetFaction = { is_pop_faction_type = exalted_priesthood } }
+			success_text = { text = faction_embrace.3.desc.fanatic_purifiers event_target:TargetFaction = { is_pop_faction_type = fanatic_purifiers } }
+			success_text = { text = faction_embrace.3.desc.feudal_realm event_target:TargetFaction = { is_pop_faction_type = feudal_realm } }
+			success_text = { text = faction_embrace.3.desc.free_haven event_target:TargetFaction = { is_pop_faction_type = free_haven } }
+			success_text = { text = faction_embrace.3.desc.functional_architecture event_target:TargetFaction = { is_pop_faction_type = functional_architecture } }
+			success_text = { text = faction_embrace.3.desc.idealistic_foundation event_target:TargetFaction = { is_pop_faction_type = idealistic_foundation } }
+			success_text = { text = faction_embrace.3.desc.imperial_cult event_target:TargetFaction = { is_pop_faction_type = imperial_cult } }
+			success_text = { text = faction_embrace.3.desc.inwards_perfection event_target:TargetFaction = { is_pop_faction_type = inwards_perfection } }
+			success_text = { text = faction_embrace.3.desc.memorialist event_target:TargetFaction = { is_pop_faction_type = memorialist } }
+			success_text = { text = faction_embrace.3.desc.merchant_guilds event_target:TargetFaction = { is_pop_faction_type = merchant_guilds } }
+			success_text = { text = faction_embrace.3.desc.meritocracy event_target:TargetFaction = { is_pop_faction_type = meritocracy } }
+			success_text = { text = faction_embrace.3.desc.mining_guilds event_target:TargetFaction = { is_pop_faction_type = mining_guilds } }
+			success_text = { text = faction_embrace.3.desc.nationalistic_zeal event_target:TargetFaction = { is_pop_faction_type = nationalistic_zeal } }
+			success_text = { text = faction_embrace.3.desc.parliamentary_system event_target:TargetFaction = { is_pop_faction_type = parliamentary_system } }
+			success_text = { text = faction_embrace.3.desc.philosopher_king event_target:TargetFaction = { is_pop_faction_type = philosopher_king } }
+			success_text = { text = faction_embrace.3.desc.police_state event_target:TargetFaction = { is_pop_faction_type = police_state } }
+			success_text = { text = faction_embrace.3.desc.reanimated_armies event_target:TargetFaction = { is_pop_faction_type = reanimated_armies } }
+			success_text = { text = faction_embrace.3.desc.shadow_council event_target:TargetFaction = { is_pop_faction_type = shadow_council } }
+			success_text = { text = faction_embrace.3.desc.shared_burden event_target:TargetFaction = { is_pop_faction_type = shared_burden } }
+			success_text = { text = faction_embrace.3.desc.slaver_guilds event_target:TargetFaction = { is_pop_faction_type = slaver_guilds } }
+			success_text = { text = faction_embrace.3.desc.technocracy event_target:TargetFaction = { is_pop_faction_type = technocracy } }
+			success_text = { text = faction_embrace.3.desc.warrior_culture event_target:TargetFaction = { is_pop_faction_type = warrior_culture } }
+		}
+	}
+
+	picture = GFX_evt_alien_propaganda
+	show_sound = event_factions
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
