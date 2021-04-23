@@ -12,105 +12,104 @@ pop_faction_event = {
     hide_window = yes
 
     immediate = {
-        owner = {
-            # Getting players civic count
-            set_variable = { which = total_chosen_civics value = 0 }
-            
-            if = { limit = { has_civic = civic_agrarian_idyll } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_aristocratic_elite } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_barbaric_despoilers } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_beacon_of_liberty } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_byzantine_bureaucracy } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_citizen_service } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_corporate_dominion } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_corvee_system } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_cutthroat_politics } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_death_cult } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_diplomatic_corps } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_distinguished_admiralty } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_efficient_bureaucracy } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_environmentalist } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_exalted_priesthood } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_fanatic_purifiers } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_feudal_realm } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_free_haven } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_functional_architecture } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_idealistic_foundation } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_imperial_cult } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_inwards_perfection } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_memorialist } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_merchant_guilds } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_meritocracy } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_mining_guilds } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_nationalistic_zeal } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_parliamentary_system } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_philosopher_king } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_police_state } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_reanimated_armies } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_shadow_council } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_shared_burden } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_slaver_guilds } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_technocracy } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_warrior_culture } change_variable = { which = total_chosen_civics value = 1 } }
-
-            # Add galatic sovereign
-            if = { limit = { has_civic = civic_galactic_sovereign } change_variable = { which = total_chosen_civics value = 1 } }
-            if = { limit = { has_civic = civic_galactic_sovereign_megacorp } change_variable = { which = total_chosen_civics value = 1 } }
-
-            # Getting players civic max
-            set_variable = {
-                which = civic_point_limit
-                value = 2
-            }
-            if = {
-                limit = {
-                    has_technology = tech_galactic_administration
-                }
-                change_variable = { which = civic_point_limit value = 1 }
-            }
-            if = {
-                limit = { 
-                    OR = {
-                        has_civic = civic_galactic_sovereign
-                        has_civic = civic_galactic_sovereign_megacorp
-                    }
-                }
-                change_variable = { which = civic_point_limit value = 1 }
-            }
-
-            # Determine if you have open slots
-            subtract_variable = {
-                which = civic_point_limit
-                value = total_chosen_civics
-            }
-
-            # Apply static modifiers
-            if = {
-                limit = {
-                    check_variable = {
-                        which = total_chosen_civics
-                        value > 0
-                    }
-                }
-                set_country_flag = has_civic_slots
-                remove_country_flag = no_civic_slots
-            }
-            if = {
-                limit = {
-                    check_variable = {
-                        which = total_chosen_civics
-                        value = 0
-                    }
-                }
-                set_country_flag = no_civic_slots
-                remove_country_flag = has_civic_slots
-            }        
-        }
-
         # Now that civic count is updated, call the actual event
         pop_faction_event = {
             id = faction_embrace.2
         }
+        # owner = {
+        #     # Getting players civic count
+        #     set_variable = { which = total_chosen_civics value = 0 }
+        
+        #     if = { limit = { has_civic = civic_agrarian_idyll } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_aristocratic_elite } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_barbaric_despoilers } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_beacon_of_liberty } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_byzantine_bureaucracy } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_citizen_service } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_corporate_dominion } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_corvee_system } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_cutthroat_politics } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_death_cult } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_diplomatic_corps } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_distinguished_admiralty } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_efficient_bureaucracy } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_environmentalist } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_exalted_priesthood } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_fanatic_purifiers } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_feudal_realm } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_free_haven } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_functional_architecture } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_idealistic_foundation } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_imperial_cult } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_inwards_perfection } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_memorialist } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_merchant_guilds } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_meritocracy } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_mining_guilds } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_nationalistic_zeal } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_parliamentary_system } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_philosopher_king } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_police_state } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_reanimated_armies } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_shadow_council } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_shared_burden } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_slaver_guilds } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_technocracy } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_warrior_culture } change_variable = { which = total_chosen_civics value = 1 } }
+
+        #     # Add galatic sovereign
+        #     if = { limit = { has_civic = civic_galactic_sovereign } change_variable = { which = total_chosen_civics value = 1 } }
+        #     if = { limit = { has_civic = civic_galactic_sovereign_megacorp } change_variable = { which = total_chosen_civics value = 1 } }
+
+        #     # Getting players civic max
+        #     set_variable = {
+        #         which = civic_point_limit
+        #         value = 2
+        #     }
+        #     if = {
+        #         limit = {
+        #             has_technology = tech_galactic_administration
+        #         }
+        #         change_variable = { which = civic_point_limit value = 1 }
+        #     }
+        #     if = {
+        #         limit = { 
+        #             OR = {
+        #                 has_civic = civic_galactic_sovereign
+        #                 has_civic = civic_galactic_sovereign_megacorp
+        #             }
+        #         }
+        #         change_variable = { which = civic_point_limit value = 1 }
+        #     }
+
+        #     # Determine if you have open slots
+        #     subtract_variable = {
+        #         which = civic_point_limit
+        #         value = total_chosen_civics
+        #     }
+
+        #     # Apply static modifiers
+        #     if = {
+        #         limit = {
+        #             check_variable = {
+        #                 which = total_chosen_civics
+        #                 value > 0
+        #             }
+        #         }
+        #         set_country_flag = has_civic_slots
+        #         remove_country_flag = no_civic_slots
+        #     }
+        #     if = {
+        #         limit = {
+        #             check_variable = {
+        #                 which = total_chosen_civics
+        #                 value = 0
+        #             }
+        #         }
+        #         set_country_flag = no_civic_slots
+        #         remove_country_flag = has_civic_slots
+        #     }        
+        # }
     }
 }
 
@@ -189,6 +188,210 @@ pop_faction_event = {
 
     # Choose a civic to remove
     option = {
+        name = faction_embrace.2.abandon_agrarian_idyll
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_agrarian_idyll
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_agrarian_idyll
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_aristocratic_elite
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_aristocratic_elite
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_aristocratic_elite
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_barbaric_despoilers
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_barbaric_despoilers
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_barbaric_despoilers
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_beacon_of_liberty
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_beacon_of_liberty
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_beacon_of_liberty
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
         name = faction_embrace.2.abandon_byzantine_bureaucracy
         trigger = {
             owner = { 
@@ -238,6 +441,1588 @@ pop_faction_event = {
             else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
         }
     }
+    
+    option = {
+        name = faction_embrace.2.abandon_citizen_service
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_citizen_service
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_citizen_service
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_corporate_dominion
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_corporate_dominion
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_corporate_dominion
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_corvee_system
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_corvee_system
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_corvee_system
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_cutthroat_politics
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_cutthroat_politics
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_cutthroat_politics
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_death_cult
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_death_cult
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_death_cult
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_diplomatic_corps
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_diplomatic_corps
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_diplomatic_corps
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_distinguished_admiralty
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_distinguished_admiralty
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_distinguished_admiralty
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_efficient_bureaucracy
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_efficient_bureaucracy
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_efficient_bureaucracy
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_environmentalist
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_environmentalist
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_environmentalist
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_exalted_priesthood
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_exalted_priesthood
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_exalted_priesthood
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_fanatic_purifiers
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_fanatic_purifiers
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_fanatic_purifiers
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_feudal_realm
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_feudal_realm
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_feudal_realm
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_free_haven
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_free_haven
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_free_haven
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_functional_architecture
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_functional_architecture
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_functional_architecture
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_idealistic_foundation
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_idealistic_foundation
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_idealistic_foundation
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_imperial_cult
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_imperial_cult
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_imperial_cult
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_inwards_perfection
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_inwards_perfection
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_inwards_perfection
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_memorialist
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_memorialist
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_memorialist
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_merchant_guilds
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_merchant_guilds
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_merchant_guilds
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_meritocracy
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_meritocracy
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_meritocracy
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_mining_guilds
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_mining_guilds
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_mining_guilds
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_nationalistic_zeal
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_nationalistic_zeal
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_nationalistic_zeal
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_parliamentary_system
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_parliamentary_system
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_parliamentary_system
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_philosopher_king
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_philosopher_king
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_philosopher_king
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_police_state
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_police_state
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_police_state
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_reanimated_armies
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_reanimated_armies
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_reanimated_armies
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_shadow_council
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_shadow_council
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_shadow_council
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_shared_burden
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_shared_burden
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_shared_burden
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_slaver_guilds
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_slaver_guilds
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_slaver_guilds
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_technocracy
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_technocracy
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_technocracy
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
+    option = {
+        name = faction_embrace.2.abandon_warrior_culture
+        trigger = {
+            owner = { 
+                has_country_flag = no_civic_slots
+                has_civic = civic_warrior_culture
+            }
+        }
+        hidden_effect = {
+            owner = {
+                force_remove_civic = civic_warrior_culture
+            }
+            if = { limit = { is_pop_faction_type = agrarian_idyll } owner = { force_add_civic = civic_agrarian_idyll } }
+            else_if = { limit = { is_pop_faction_type = aristocratic_elite } owner = { force_add_civic = civic_aristocratic_elite } }
+            else_if = { limit = { is_pop_faction_type = barbaric_despoilers } owner = { force_add_civic = civic_barbaric_despoilers } }
+            else_if = { limit = { is_pop_faction_type = beacon_of_liberty } owner = { force_add_civic = civic_beacon_of_liberty } }
+            else_if = { limit = { is_pop_faction_type = byzantine_bureaucracy } owner = { force_add_civic = civic_warrior_culture } }
+            else_if = { limit = { is_pop_faction_type = citizen_service } owner = { force_add_civic = civic_citizen_service } }
+            else_if = { limit = { is_pop_faction_type = corporate_dominion } owner = { force_add_civic = civic_corporate_dominion } }
+            else_if = { limit = { is_pop_faction_type = corvee_system } owner = { force_add_civic = civic_corvee_system } }
+            else_if = { limit = { is_pop_faction_type = cutthroat_politics } owner = { force_add_civic = civic_cutthroat_politics } }
+            else_if = { limit = { is_pop_faction_type = death_cult } owner = { force_add_civic = civic_death_cult } }
+            else_if = { limit = { is_pop_faction_type = diplomatic_corps } owner = { force_add_civic = civic_diplomatic_corps } }
+            else_if = { limit = { is_pop_faction_type = distinguished_admiralty } owner = { force_add_civic = civic_distinguished_admiralty } }
+            else_if = { limit = { is_pop_faction_type = efficient_bureaucracy } owner = { force_add_civic = civic_efficient_bureaucracy } }
+            else_if = { limit = { is_pop_faction_type = environmentalist } owner = { force_add_civic = civic_environmentalist } }
+            else_if = { limit = { is_pop_faction_type = exalted_priesthood } owner = { force_add_civic = civic_exalted_priesthood } }
+            else_if = { limit = { is_pop_faction_type = fanatic_purifiers } owner = { force_add_civic = civic_fanatic_purifiers } }
+            else_if = { limit = { is_pop_faction_type = feudal_realm } owner = { force_add_civic = civic_feudal_realm } }
+            else_if = { limit = { is_pop_faction_type = free_haven } owner = { force_add_civic = civic_free_haven } }
+            else_if = { limit = { is_pop_faction_type = functional_architecture } owner = { force_add_civic = civic_functional_architecture } }
+            else_if = { limit = { is_pop_faction_type = idealistic_foundation } owner = { force_add_civic = civic_idealistic_foundation } }
+            else_if = { limit = { is_pop_faction_type = imperial_cult } owner = { force_add_civic = civic_imperial_cult } }
+            else_if = { limit = { is_pop_faction_type = inwards_perfection } owner = { force_add_civic = civic_inwards_perfection } }
+            else_if = { limit = { is_pop_faction_type = memorialist } owner = { force_add_civic = civic_memorialist } }
+            else_if = { limit = { is_pop_faction_type = merchant_guilds } owner = { force_add_civic = civic_merchant_guilds } }
+            else_if = { limit = { is_pop_faction_type = meritocracy } owner = { force_add_civic = civic_meritocracy } }
+            else_if = { limit = { is_pop_faction_type = mining_guilds } owner = { force_add_civic = civic_mining_guilds } }
+            else_if = { limit = { is_pop_faction_type = nationalistic_zeal } owner = { force_add_civic = civic_nationalistic_zeal } }
+            else_if = { limit = { is_pop_faction_type = parliamentary_system } owner = { force_add_civic = civic_parliamentary_system } }
+            else_if = { limit = { is_pop_faction_type = philosopher_king } owner = { force_add_civic = civic_philosopher_king } }
+            else_if = { limit = { is_pop_faction_type = police_state } owner = { force_add_civic = civic_police_state } }
+            else_if = { limit = { is_pop_faction_type = reanimated_armies } owner = { force_add_civic = civic_reanimated_armies } }
+            else_if = { limit = { is_pop_faction_type = shadow_council } owner = { force_add_civic = civic_shadow_council } }
+            else_if = { limit = { is_pop_faction_type = shared_burden } owner = { force_add_civic = civic_shared_burden } }
+            else_if = { limit = { is_pop_faction_type = slaver_guilds } owner = { force_add_civic = civic_slaver_guilds } }
+            else_if = { limit = { is_pop_faction_type = technocracy } owner = { force_add_civic = civic_technocracy } }
+            else_if = { limit = { is_pop_faction_type = warrior_culture } owner = { force_add_civic = civic_warrior_culture } }
+        }
+    }
+    
 
     # Cancel civic adoption
     option = {
