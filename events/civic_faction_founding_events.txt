@@ -13,154 +13,42 @@ pop_faction_event = {
             text = newline
 
             # Civic faction middle desc
-            success_text = {
-                text = government_branches.1.desc.agrarian_idyll
-                is_pop_faction_type = agrarian_idyll
-            }
-            success_text = {
-                text = government_branches.1.desc.aristocratic_elite
-                is_pop_faction_type = aristocratic_elite
-            }
-            success_text = {
-                text = government_branches.1.desc.barbaric_despoilers
-                is_pop_faction_type = barbaric_despoilers
-            }
-            success_text = {
-                text = government_branches.1.desc.beacon_of_liberty
-                is_pop_faction_type = beacon_of_liberty
-            }
-            success_text = {
-                text = government_branches.1.desc.byzantine_bureaucracy
-                is_pop_faction_type = byzantine_bureaucracy
-            }
-            success_text = {
-                text = government_branches.1.desc.citizen_service
-                is_pop_faction_type = citizen_service
-            }
-            success_text = {
-                text = government_branches.1.desc.corporate_dominion
-                is_pop_faction_type = corporate_dominion
-            }
-            success_text = {
-                text = government_branches.1.desc.corvee_system
-                is_pop_faction_type = corvee_system
-            }
-            success_text = {
-                text = government_branches.1.desc.cutthroat_politics
-                is_pop_faction_type = cutthroat_politics
-            }
-            success_text = {
-                text = government_branches.1.desc.death_cult
-                is_pop_faction_type = death_cult
-            }
-            success_text = {
-                text = government_branches.1.desc.diplomatic_corps
-                is_pop_faction_type = diplomatic_corps
-            }
-            success_text = {
-                text = government_branches.1.desc.distinguished_admiralty
-                is_pop_faction_type = distinguished_admiralty
-            }
-            success_text = {
-                text = government_branches.1.desc.efficient_bureaucracy
-                is_pop_faction_type = efficient_bureaucracy
-            }
-            success_text = {
-                text = government_branches.1.desc.environmentalist
-                is_pop_faction_type = environmentalist
-            }
-            success_text = {
-                text = government_branches.1.desc.exalted_priesthood
-                is_pop_faction_type = exalted_priesthood
-            }
-            success_text = {
-                text = government_branches.1.desc.fanatic_purifiers
-                is_pop_faction_type = fanatic_purifiers
-            }
-            success_text = {
-                text = government_branches.1.desc.feudal_realm
-                is_pop_faction_type = feudal_realm
-            }
-            success_text = {
-                text = government_branches.1.desc.free_haven
-                is_pop_faction_type = free_haven
-            }
-            success_text = {
-                text = government_branches.1.desc.functional_architecture
-                is_pop_faction_type = functional_architecture
-            }
-            success_text = {
-                text = government_branches.1.desc.idealistic_foundation
-                is_pop_faction_type = idealistic_foundation
-            }
-            success_text = {
-                text = government_branches.1.desc.imperial_cult
-                is_pop_faction_type = imperial_cult
-            }
-            success_text = {
-                text = government_branches.1.desc.inwards_perfection
-                is_pop_faction_type = inwards_perfection
-            }
-            success_text = {
-                text = government_branches.1.desc.memorialist
-                is_pop_faction_type = memorialist
-            }
-            success_text = {
-                text = government_branches.1.desc.merchant_guilds
-                is_pop_faction_type = merchant_guilds
-            }
-            success_text = {
-                text = government_branches.1.desc.meritocracy
-                is_pop_faction_type = meritocracy
-            }
-            success_text = {
-                text = government_branches.1.desc.mining_guilds
-                is_pop_faction_type = mining_guilds
-            }
-            success_text = {
-                text = government_branches.1.desc.nationalistic_zeal
-                is_pop_faction_type = nationalistic_zeal
-            }
-            success_text = {
-                text = government_branches.1.desc.parliamentary_system
-                is_pop_faction_type = parliamentary_system
-            }
-            success_text = {
-                text = government_branches.1.desc.philosopher_king
-                is_pop_faction_type = philosopher_king
-            }
-            success_text = {
-                text = government_branches.1.desc.police_state
-                is_pop_faction_type = police_state
-            }
-            success_text = {
-                text = government_branches.1.desc.police_state
-                is_pop_faction_type = police_state
-            }
-            success_text = {
-                text = government_branches.1.desc.reanimated_armies
-                is_pop_faction_type = reanimated_armies
-            }
-            success_text = {
-                text = government_branches.1.desc.shadow_council
-                is_pop_faction_type = shadow_council
-            }
-            success_text = {
-                text = government_branches.1.desc.shared_burden
-                is_pop_faction_type = shared_burden
-            }
-            success_text = {
-                text = government_branches.1.desc.slaver_guilds
-                is_pop_faction_type = slaver_guilds
-            }
-            success_text = {
-                text = government_branches.1.desc.technocracy
-                is_pop_faction_type = technocracy
-            }
-            success_text = {
-                text = government_branches.1.desc.warrior_culture
-                is_pop_faction_type = warrior_culture
-            }
+            success_text = { text = government_branches.1.desc.agrarian_idyll is_pop_faction_type = agrarian_idyll }
+            success_text = { text = government_branches.1.desc.aristocratic_elite is_pop_faction_type = aristocratic_elite }
+            success_text = { text = government_branches.1.desc.barbaric_despoilers is_pop_faction_type = barbaric_despoilers }
+            success_text = { text = government_branches.1.desc.beacon_of_liberty is_pop_faction_type = beacon_of_liberty }
+            success_text = { text = government_branches.1.desc.byzantine_bureaucracy is_pop_faction_type = byzantine_bureaucracy }
+            success_text = { text = government_branches.1.desc.citizen_service is_pop_faction_type = citizen_service }
+            success_text = { text = government_branches.1.desc.corporate_dominion is_pop_faction_type = corporate_dominion }
+            success_text = { text = government_branches.1.desc.corvee_system is_pop_faction_type = corvee_system }
+            success_text = { text = government_branches.1.desc.cutthroat_politics is_pop_faction_type = cutthroat_politics }
+            success_text = { text = government_branches.1.desc.death_cult is_pop_faction_type = death_cult }
+            success_text = { text = government_branches.1.desc.diplomatic_corps is_pop_faction_type = diplomatic_corps }
+            success_text = { text = government_branches.1.desc.distinguished_admiralty is_pop_faction_type = distinguished_admiralty }
+            success_text = { text = government_branches.1.desc.efficient_bureaucracy is_pop_faction_type = efficient_bureaucracy }
+            success_text = { text = government_branches.1.desc.environmentalist is_pop_faction_type = environmentalist }
+            success_text = { text = government_branches.1.desc.exalted_priesthood is_pop_faction_type = exalted_priesthood }
+            success_text = { text = government_branches.1.desc.fanatic_purifiers is_pop_faction_type = fanatic_purifiers }
+            success_text = { text = government_branches.1.desc.feudal_realm is_pop_faction_type = feudal_realm }
+            success_text = { text = government_branches.1.desc.free_haven is_pop_faction_type = free_haven }
+            success_text = { text = government_branches.1.desc.functional_architecture is_pop_faction_type = functional_architecture }
+            success_text = { text = government_branches.1.desc.idealistic_foundation is_pop_faction_type = idealistic_foundation }
+            success_text = { text = government_branches.1.desc.imperial_cult is_pop_faction_type = imperial_cult }
+            success_text = { text = government_branches.1.desc.inwards_perfection is_pop_faction_type = inwards_perfection }
+            success_text = { text = government_branches.1.desc.memorialist is_pop_faction_type = memorialist }
+            success_text = { text = government_branches.1.desc.merchant_guilds is_pop_faction_type = merchant_guilds }
+            success_text = { text = government_branches.1.desc.meritocracy is_pop_faction_type = meritocracy }
+            success_text = { text = government_branches.1.desc.mining_guilds is_pop_faction_type = mining_guilds }
+            success_text = { text = government_branches.1.desc.nationalistic_zeal is_pop_faction_type = nationalistic_zeal }
+            success_text = { text = government_branches.1.desc.parliamentary_system is_pop_faction_type = parliamentary_system }
+            success_text = { text = government_branches.1.desc.philosopher_king is_pop_faction_type = philosopher_king }
+            success_text = { text = government_branches.1.desc.police_state is_pop_faction_type = police_state }
+            success_text = { text = government_branches.1.desc.reanimated_armies is_pop_faction_type = reanimated_armies }
+            success_text = { text = government_branches.1.desc.shadow_council is_pop_faction_type = shadow_council }
+            success_text = { text = government_branches.1.desc.shared_burden is_pop_faction_type = shared_burden }
+            success_text = { text = government_branches.1.desc.slaver_guilds is_pop_faction_type = slaver_guilds }
+            success_text = { text = government_branches.1.desc.technocracy is_pop_faction_type = technocracy }
+            success_text = { text = government_branches.1.desc.warrior_culture is_pop_faction_type = warrior_culture }
 
             text = newline            
             text = government_branches.1.desc.finisher
